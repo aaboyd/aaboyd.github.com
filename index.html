@@ -1,0 +1,12 @@
+---
+layout: page
+---
+
+{% for post in site.posts limit 5 %}
+  <h2><strong>{{ post.date | date: "%B %e, %Y" }} &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
+  {{ post.content | truncatewords:150}}<br>
+  <strong><a href="{{ post.url }}">Read more...</a></strong><br><br>
+{% endfor %}
+
+
+

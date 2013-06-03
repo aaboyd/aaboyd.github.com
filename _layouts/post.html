@@ -1,5 +1,48 @@
 ---
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/twitter/post.html %}
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>{{ page.date | date_to_long_string }}</span>
+    </div>
+    <div class="content">
+      {{ content }}
+    </div>
+
+    {% unless page.tags == empty %}
+      <hr />
+      <div>
+        {% for tag in page.tags %} 
+          <li><a href="{{ BASE_PATH }}/tags.html#{{ tag }}-ref">{{ tag }}</a></div>
+        {% endfor %}
+      </div>
+    {% endunless %}  
+  
+    <hr />
+    <div class="pagination">
+      {% if page.previous %}
+        <div class="medium default btn icon-left entypo icon-left-open"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">Previous</a></div>
+      {% endif %}
+        <div class="medium default btn"><a href="{{ BASE_PATH }}/archive.html">Archive</a></div>
+      {% if page.next %}
+        <div class="medium default btn icon-right entypo icon-right-open"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next</a></div>
+      {% endif %}
+    </div>
+    <hr />
+    <div id="disqus_thread"></div>
+      <script type="text/javascript">
+      {% if site.safe == false %}var disqus_developer = 1;{% endif %}
+      var disqus_shortname = '{{ site.comments.disqus.short_name }}'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>

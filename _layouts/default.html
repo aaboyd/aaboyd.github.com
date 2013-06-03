@@ -1,6 +1,114 @@
----
-theme :
-  name : twitter
----
-{% include JB/setup %}
-{% include themes/twitter/default.html %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link href="/assets/css/gumby.css" rel="stylesheet">
+
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div id="navbar-main-nav" class="navbar">
+      <div class="row">
+        <a class="toggle" gumby-trigger="#navbar-main-nav #main-nav" href="#"><i class="icon-menu"></i></a>
+        <h3 class="three columns logo">
+          <a href="/">{{ site.title }}</a>
+        </h3>
+        <nav>
+          <ul id="main-nav" class="nine columns">
+            {% for node in site.pages %}
+              {% if node.title != null %}
+                {% if 'navigation' == node.group %}
+                	{% if page.url == node.url %}
+      	            <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+      	          {% else %}
+                  	<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+                	{% endif %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            <li><a style="padding:0px;" href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i></a></li>    
+            <li><a style="padding:0px;" href="http://bitbucket.org/{{ site.author.bitbucket }}" target="_blank"><i class="large icon-bucket"></i></a></li>            
+            <li><a style="padding:0px;" href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i></a></li>
+            <li><a style="padding:0px;" href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i></a></li>
+            <li><a style="padding:0px;" href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i></a></li>
+          </ul>        
+        </nav>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="danger alert">This site is still a work in progress <br /> I am aware things are broken :)</div>
+      </div>
+      {% if page.title or page.tagline %}
+      <div class="row">
+        {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+        {% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
+        <hr style="margin: 0px" />
+      </div>
+      {% endif %}
+      <div class="row">
+        {{ content }}
+      </div>
+    </div>
+    
+    <!--
+    <div class="container" gumby-fixed="bottom">
+      <div class="row">
+        <footer>
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} FOOTER TEXT</p>
+        </footer>        
+      </div>
+    </div>
+
+    {% include JB/analytics %}
+    -->
+        
+    <script src="/assets/js/libs/jquery-1.9.1.min.js"></script>
+    <script src="/assets/js/libs/modernizr-2.6.2.min.js"></script>
+    <script src="/assets/js/libs/gumby.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    
+    <script type="text/javascript">
+    /**
+    * Gumby Init
+    */
+
+    // test for touch event support
+    Modernizr.load({
+	    test: Modernizr.touch,
+
+    	// if present load custom jQuery mobile build and update Gumby.click
+    	yep: '/assets/js/libs/jquery.mobile.custom.min.js',
+    	callback: function(url, result, key) {
+	    	// check jQuery mobile has successfully loaded before using tap events
+    		if($.mobile) {
+	    		window.Gumby.click = 'tap';
+    		}
+    	},
+
+	    // either way initialize Gumby
+	    complete: function() {
+		    window.Gumby.init();
+
+		    // if AMD return Gumby object to define
+    		if(typeof define == "function" && define.amd) {
+    			define(window.Gumby);
+		    }
+    	}
+    });
+    </script>
+  </body>
+</html>
