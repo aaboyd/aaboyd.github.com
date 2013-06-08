@@ -13,16 +13,13 @@ author :
   bitbucket : boydale1
   gplus : 101836723454902363467
 
-production_url : http://username.github.io
-
 comments :
   disqus :
     short_name : alexboydblog
            
 analytics :
-  provider : google 
   google : 
-    tracking_id : 'UA-123-12'
+    tracking_id : 'UA-34607589-1'
     
 sharing :
   provider : true

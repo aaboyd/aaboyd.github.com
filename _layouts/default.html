@@ -11,6 +11,7 @@
 
     <!-- Le styles -->
     <link href="/assets/css/gumby.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
@@ -22,11 +23,11 @@
     <div id="navbar-main-nav" class="navbar">
       <div class="row">
         <a class="toggle" gumby-trigger="#navbar-main-nav #main-nav" href="#"><i class="icon-menu"></i></a>
-        <h3 class="three columns logo">
+        <h3 class="five columns logo">
           <a href="/">{{ site.title }}</a>
         </h3>
         <nav>
-          <ul id="main-nav" class="nine columns">
+          <ul id="main-nav" class="eleven columns">
             {% for node in site.pages %}
               {% if node.title != null %}
                 {% if 'navigation' == node.group %}
@@ -38,30 +39,46 @@
                 {% endif %}
               {% endif %}
             {% endfor %}
-            <li><a style="padding:0px;" href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i></a></li>    
-            <li><a style="padding:0px;" href="http://bitbucket.org/{{ site.author.bitbucket }}" target="_blank"><i class="large icon-bucket"></i></a></li>            
-            <li><a style="padding:0px;" href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i></a></li>
-            <li><a style="padding:0px;" href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i></a></li>
-            <li><a style="padding:0px;" href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i></a></li>
+            <li><a href="#">Connect With Me ...</a>
+              <div class="dropdown">
+                <ul>
+                    <li><a href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i>Github</a></li>    
+                    <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}" target="_blank"><i class="large icon-bucket"></i>Bitbucket</a></li>
+                    <li><a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i>Google Plus</a></li>
+                    <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i>Twitter</a></li>
+                    <li><a href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i>Email</a></li>
+                </ul>
+             </div>
+            </li>
           </ul>        
         </nav>
       </div>
     </div>
     
     <div class="container">
-      <div class="row">
-        <div class="danger alert">This site is still a work in progress <br /> I am aware things are broken :)</div>
-      </div>
-      {% if page.title or page.tagline %}
-      <div class="row">
-        {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
-        {% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
-        <hr style="margin: 0px" />
-      </div>
-      {% endif %}
-      <div class="row">
-        {{ content }}
-      </div>
+        <div class="row">
+            <div class="twelve columns">
+                <div class="danger alert">
+                    This site is still a work in progress <br /> I am aware things are broken :)
+                </div>
+                {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+                {% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
+                {{ content }}
+            </div>
+            <div class="four columns">
+                <div class="row alert default" style="padding-top: 10px;padding-bottom: 10px;">
+                    <article class="valign row">
+                        <div>
+                            <img alt="ME" src="http://aaboyd.github.io/assets/img/me.png" align="right" style="padding-right: 5px;" />
+                        </div>
+                        <p>
+                            <a href="/about.html"><strong>About Alex</strong></a><br />
+                            Sofware Engineer, Detroiter, Gamer, Sports fan<br />Just trying to make it in this world.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!--
@@ -82,6 +99,16 @@
     <script src="/assets/js/plugins.js"></script>
     
     <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ site.analytics.google.tracking_id }}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
     /**
     * Gumby Init
     */
