@@ -31,11 +31,7 @@
             {% for node in site.pages %}
               {% if node.title != null %}
                 {% if 'navigation' == node.group %}
-                	{% if page.url == node.url %}
-      	            <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
-      	          {% else %}
-                  	<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
-                	{% endif %}
+					<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
                 {% endif %}
               {% endif %}
             {% endfor %}
@@ -55,87 +51,63 @@
       </div>
     </div>
     
-    <div class="container">
-        <div class="row">
-            <div class="twelve columns">
-                <div class="danger alert">
-                    This site is still a work in progress <br /> I am aware things are broken :)
-                </div>
-                {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
-                {% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
-                {{ content }}
-            </div>
-            <div class="four columns">
-                <div class="row alert default" style="padding-top: 10px;padding-bottom: 10px;">
-                    <article class="valign row">
-                        <div>
-                            <img alt="ME" src="http://aaboyd.github.io/assets/img/me.png" align="right" style="padding-right: 5px;" />
-                        </div>
-                        <p>
-                            <a href="/about.html"><strong>About Alex</strong></a><br />
-                            Sofware Engineer, Detroiter, Gamer, Sports fan<br />Just trying to make it in this world.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!--
-    <div class="container" gumby-fixed="bottom">
+     <div class="row">
+       <div class="danger alert">
+         This site is still a work in progress <br /> I am aware things are broken :)
+       </div>
+       {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+       {% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
+       {{ content }}
+     </div>
+     <div id="about" class="container shade default">
+		<div class="row">
+			<div class="centered eight columns">
+			<article class="valign row" style="margin: auto">
+				<div>
+					<img alt="ME" src="http://aaboyd.github.io/assets/img/me.png" style="margin:15px"/>
+				</div>
+				<div>
+					<p>
+						<a href="/about.html">About Alex</a><br />
+						Sofware Engineer, Detroiter, Gamer, Sports fan<br />
+						Writing here to keep track of his thoughts, and maybe help someone along the way.
+					</p>
+					<span><a href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i></a></span>    
+                    <span><a href="http://bitbucket.org/{{ site.author.bitbucket }}" target="_blank"><i class="large icon-bucket"></i></a></span>
+                    <span><a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i></a></span>
+                    <span><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i></a></span>
+                    <span><a href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i></a></span>
+				</div>
+			</article>
+			</div>
+		</div>
+	</div>
+	
+    <div id="footer" class="container shade info">
       <div class="row">
-        <footer>
-          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} FOOTER TEXT</p>
+        <footer class="centered eight column">
+          &copy; Copyright {{ site.time | date: '%Y' }} <a href="/about.html">{{ site.author.name }}</a>,
+          Designed by <a href="/about.html">{{ site.author.name }}</a></span>
+          with the help of <a href="http://jekyllrb.com">Jekyll</a></span> and <a href="http://gumbyframework.com">Gumby</a>
         </footer>        
       </div>
     </div>
-
-    {% include JB/analytics %}
-    -->
         
     <script src="/assets/js/libs/jquery-1.9.1.min.js"></script>
     <script src="/assets/js/libs/modernizr-2.6.2.min.js"></script>
-    <script src="/assets/js/libs/gumby.min.js"></script>
+    <script gumby-path="/assets/js/libs" src="/assets/js/libs/gumby.min.js"></script>
+    <script src="/assets/js/libs/gumby.init.js"></script>
     <script src="/assets/js/plugins.js"></script>
     
     <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '{{ site.analytics.google.tracking_id }}']);
   _gaq.push(['_trackPageview']);
-
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
-    /**
-    * Gumby Init
-    */
-
-    // test for touch event support
-    Modernizr.load({
-	    test: Modernizr.touch,
-
-    	// if present load custom jQuery mobile build and update Gumby.click
-    	yep: '/assets/js/libs/jquery.mobile.custom.min.js',
-    	callback: function(url, result, key) {
-	    	// check jQuery mobile has successfully loaded before using tap events
-    		if($.mobile) {
-	    		window.Gumby.click = 'tap';
-    		}
-    	},
-
-	    // either way initialize Gumby
-	    complete: function() {
-		    window.Gumby.init();
-
-		    // if AMD return Gumby object to define
-    		if(typeof define == "function" && define.amd) {
-    			define(window.Gumby);
-		    }
-    	}
-    });
     </script>
   </body>
 </html>
