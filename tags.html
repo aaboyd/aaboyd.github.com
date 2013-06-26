@@ -5,28 +5,19 @@ header: Posts By Tag
 group: navigation
 ---
 
-<div>
+<div style="padding-top:10px">
   {% for tag in site.tags %}
-    <div style="margin:5px" class="medium primary btn"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></div>
-  {% endfor %}
-  {% for tag in site.tags %}
-    <div style="margin:5px" class="medium primary btn"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></div>
-  {% endfor %}
-  {% for tag in site.tags %}
-    <div style="margin:5px" class="medium primary btn"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></div>
-  {% endfor %}
-  {% for tag in site.tags %}
-    <div style="margin:5px" class="medium primary btn"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></div>
+    <div style="margin:3px" class="large secondary btn"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></div>
   {% endfor %}
 </div>
 
 
 {% for tag in site.tags %}
-  <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+  <h1 id="{{ tag[0] }}">{{ tag[0] }}</h1>
   <ul>
     {% for node in tag[1] %}
       {% if node.title != null %}
-        <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+        <h4><li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li></h4>
       {% endif %}
     {% endfor %}
   </ul>

@@ -20,45 +20,29 @@
   </head>
 
   <body>
-    <div id="navbar-main-nav" class="navbar">
-      <div class="row">
-        <a class="toggle" gumby-trigger="#navbar-main-nav #main-nav" href="#"><i class="icon-menu"></i></a>
-        <h3 class="five columns logo">
-          <a href="/">{{ site.title }}</a>
-        </h3>
-        <nav>
-          <ul id="main-nav" class="eleven columns">
-            {% for node in site.pages %}
-              {% if node.title != null %}
-                {% if 'navigation' == node.group %}
-					<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-            <li><a href="#">Connect With Me ...</a>
-              <div class="dropdown">
-                <ul>
-                    <li><a href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i>Github</a></li>    
-                    <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}" target="_blank"><i class="large icon-bucket"></i>Bitbucket</a></li>
-                    <li><a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i>Google Plus</a></li>
-                    <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i>Twitter</a></li>
-                    <li><a href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i>Email</a></li>
-                </ul>
-             </div>
-            </li>
-          </ul>        
-        </nav>
-      </div>
-    </div>
-    
-     <div class="row">
+  	<div class="row">
+		<article id="top-nav" class="valign row">
+			<div>
+				<h1><a href="/">Alex Boyd</a></h1>
+			</div>
+			<div>
+	  			<ul>
+	            	<li class="large btn secondary pill-left"><a href="/archive.html">Archive</a></li>
+	            	<li class="large btn secondary"><a href="/tags.html">Tags</a></li>
+	            	<li class="large btn secondary pill-right"><a href="/about.html">About</a></li>
+				</ul>
+			</div>
+		</article>
+  	</div>
+<!-- 
+	<div class="row">
        <div class="danger alert">
          This site is still a work in progress <br /> I am aware things are broken :)
        </div>
-       {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
-       {% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
-       {{ content }}
-     </div>
+	</div>
+	 -->
+	{{ content }}
+	
      <div id="about" class="container shade default">
 		<div class="row">
 			<div class="centered eight columns">
@@ -83,7 +67,7 @@
 		</div>
 	</div>
 	
-    <div id="footer" class="container shade info">
+    <div id="footer" class="container shade secondary">
       <div class="row">
         <footer class="centered eight column">
           &copy; Copyright {{ site.time | date: '%Y' }} <a href="/about.html">{{ site.author.name }}</a>,
@@ -97,7 +81,6 @@
     <script src="/assets/js/libs/modernizr-2.6.2.min.js"></script>
     <script gumby-path="/assets/js/libs" src="/assets/js/libs/gumby.min.js"></script>
     <script src="/assets/js/libs/gumby.init.js"></script>
-    <script src="/assets/js/plugins.js"></script>
     
     <script type="text/javascript">
   var _gaq = _gaq || [];

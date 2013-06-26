@@ -2,22 +2,30 @@
 layout: default
 ---
 
-<div class="row-fluid post-full">
-	<div class="date">
-		<span>{{ page.date | date_to_long_string }}</span>
-	</div>
-	<div class="content">{{ content }}</div>
-	{% unless page.tags == empty %}
-	<hr />
-	<div style="text-align: center">
-		<h5>Tags</h5>
-		{% for tag in page.tags %}
-		<div class="primary btn">
-			<a href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
+<div class="container shade primary">
+	<div class="row" style="text-align:center">
+   		{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+   		{% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
+   </div>
+</div>
+<div class="container shade default">
+   <div class="row" style="text-align:center">
+		<h4 class="six columns">{{ page.date | date: "%B %e, %Y" }}</h4>
+		{% unless page.tags == empty %}
+		<div>
+		   	<h4>Tags :
+				{% for tag in page.tags %}
+					<a class="secondary badge" href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
+				{% endfor %}
+			</h4>
 		</div>
-		{% endfor %}
-	</div>
-	{% endunless %}
+		{% endunless %}
+   </div>
+</div>
+
+<div class="row">
+	<div class="content">{{ content }}</div>
+
 	<hr />
 	<div class="pagination" style="text-align: center">
 		{% if page.previous %}
