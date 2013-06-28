@@ -1,12 +1,29 @@
 ---
-layout: page
+layout: default
 ---
 
 {% for post in site.posts limit 5 %}
-  <h2><strong>{{ post.date | date: "%B %e, %Y" }} &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></h2>
-  {{ post.content | truncatewords:150}}<br>
-  <strong><a href="{{ post.url }}">Read more...</a></strong><br><br>
+<div class="container shade primary">
+	<div class="row">
+		<h2><span style="padding-right:25px">{{ post.date | date: "%B %e, %Y" }}</span><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+	</div>
+</div>
+<div class="row">
+  {{ post.content | truncatewords:175}}<br>
+  <h4><a href="{{ post.url }}">Read more...</a></strong><h4>
+</div>
 {% endfor %}
 
+{% for post in site.posts limit 5 %}
+<div class="container shade primary">
+	<div class="row">
+		<h2><span style="padding-right:25px">{{ post.date | date: "%B %e, %Y" }}</span><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+	</div>
+</div>
+<div class="row">
+  {{ post.content | truncatewords:175}}<br>
+  <h4><a href="{{ post.url }}">Read more...</a></strong><h4>
+</div>
+{% endfor %}
 
 
