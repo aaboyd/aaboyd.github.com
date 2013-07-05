@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }}{% if page.tagline %} - {{ page.tagline }}{% endif %}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
@@ -27,9 +27,9 @@
 			</div>
 			<div>
 	  			<ul>
-	            	<li class="large btn secondary pill-left"><a href="/archive.html">Archive</a></li>
-	            	<li class="large btn secondary"><a href="/tags.html">Tags</a></li>
-	            	<li class="large btn secondary pill-right"><a href="/about.html">About</a></li>
+	            	<li class="secondary btn"><a href="/archive.html">Archive</a></li>
+	            	<li class="secondary btn"><a href="/tags.html">Tags</a></li>
+	            	<li class="secondary btn"><a href="/about.html">About</a></li>
 				</ul>
 			</div>
 		</article>
@@ -45,24 +45,20 @@
 	
      <div id="about" class="container shade default">
 		<div class="row">
-			<div class="centered eight columns">
-			<article class="valign row" style="margin: auto">
-				<div>
-					<img alt="ME" src="http://aaboyd.github.io/assets/img/me.png" style="margin:15px"/>
-				</div>
-				<div>
-					<p>
-						<a href="/about.html">About Alex</a><br />
-						Sofware Engineer, Detroiter, Gamer, Sports fan<br />
-						Writing here to keep track of his thoughts, and maybe help someone along the way.
-					</p>
-					<span><a href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i></a></span>    
-                    <span><a href="http://bitbucket.org/{{ site.author.bitbucket }}" target="_blank"><i class="large icon-bucket"></i></a></span>
-                    <span><a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i></a></span>
-                    <span><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i></a></span>
-                    <span><a href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i></a></span>
-				</div>
-			</article>
+			<div class="push_three two column">
+				<img alt="ME" src="http://aaboyd.github.io/assets/img/me.png" />
+			</div>
+			<div class="six column">
+				<p>
+					<a href="/about.html">About Alex</a><br />
+					Sofware Engineer, Detroiter, Gamer, Sports fan<br />
+					Writing here to keep track of his thoughts, and maybe help someone along the way.
+				</p>
+				<span><a href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i></a></span>    
+                   <span><a href="http://bitbucket.org/{{ site.author.bitbucket }}" target="_blank"><i class="large icon-bucket"></i></a></span>
+                   <span><a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i></a></span>
+                   <span><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i></a></span>
+                   <span><a href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i></a></span>
 			</div>
 		</div>
 	</div>
@@ -72,7 +68,7 @@
         <footer class="centered eight column">
           &copy; Copyright {{ site.time | date: '%Y' }} <a href="/about.html">{{ site.author.name }}</a>,
           Designed by <a href="/about.html">{{ site.author.name }}</a></span>
-          with the help of <a href="http://jekyllrb.com">Jekyll</a></span> and <a href="http://gumbyframework.com">Gumby</a>
+          with the help of <a href="http://gumbyframework.com">Gumby</a>
         </footer>        
       </div>
     </div>

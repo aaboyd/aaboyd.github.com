@@ -2,22 +2,33 @@
 layout: default
 ---
 
-<div class="container shade primary">
-	<div class="row" style="text-align:center">
-   		{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+<div class="shade primary">
+	<div class="row post_header">
+   		{% if page.title %}<h1 class="title">{{ page.title }}</h1>{% endif %}
    		{% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
+   		<h4 class="date">{{ page.date | date: "%B %e, %Y" }}</h4>
    </div>
 </div>
-<div class="container shade default">
-   <div class="row" style="text-align:center">
-		<h4 class="six columns">{{ page.date | date: "%B %e, %Y" }}</h4>
+<div class="shade default" style="text-align:center">
+	<div class="row">
+		<div class="six columns share">
+			<h4>
+				<a href="http://www.facebook.com/share.php?u={{ site.url }}{{ page.url }}&title={{ page.title }} - Alex Boyd#"><i class="icon-facebook"></i></a>
+				<a href="http://twitter.com/home?status={{ page.title }} - Alex Boyd%0A{{ site.url }}{{ page.url }}"><i class="icon-twitter"></i></a>
+				<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"><i class="icon-gplus"></i></a>
+				<!-- 
+				<a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }} - Alex Boyd#"><i class="icon-stumbleupon"></i></a>
+				 -->
+				<a href="mailto:?subject=Check this out!&body={{ page.title }} ({{ site.url }}{{ page.url }}) - Alex Boyd%0D%0A%0D%0A%0D%0A{{ page.description }}"><i class="icon-mail"></i></a>
+			</h4>
+		</div>
 		{% unless page.tags == empty %}
-		<div>
-		   	<h4>Tags :
+		<div class="eight columns tags">
+		   	<h5><strong>Tags</strong>
 				{% for tag in page.tags %}
 					<a class="secondary badge" href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
 				{% endfor %}
-			</h4>
+			</h5>
 		</div>
 		{% endunless %}
    </div>
@@ -29,16 +40,16 @@ layout: default
 	<hr />
 	<div class="pagination" style="text-align: center">
 		{% if page.previous %}
-		<div class="medium default btn icon-left entypo icon-left-open">
+		<div class="large secondary btn icon-left entypo icon-left-open">
 			<a href="{{ BASE_PATH }}{{ page.previous.url }}"
 				title="{{ page.previous.title }}">Previous</a>
 		</div>
 		{% endif %}
-		<div class="medium default btn">
+		<div class="large secondary btn">
 			<a href="{{ BASE_PATH }}/archive.html">Archive</a>
 		</div>
 		{% if page.next %}
-		<div class="medium default btn icon-right entypo icon-right-open">
+		<div class="large secondary btn icon-right entypo icon-right-open">
 			<a href="{{ BASE_PATH }}{{ page.next.url }}"
 				title="{{ page.next.title }}">Next</a>
 		</div>

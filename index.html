@@ -4,8 +4,9 @@ layout: default
 
 {% for post in site.posts limit 5 %}
 <div class="container shade primary">
-	<div class="row">
-		<h2><span style="padding-right:25px">{{ post.date | date: "%B %e, %Y" }}</span><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+	<div class="row post_header">
+		<h1 class="title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
+		<h4 class="date">{{ post.date | date: "%B %e, %Y" }}</h4>
 	</div>
 </div>
 <div class="row">

@@ -4,6 +4,7 @@ lsi: false
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
+url : http://aaboyd.github.io
 title : Alex Boyd
 author :
   name : Alex Boyd
