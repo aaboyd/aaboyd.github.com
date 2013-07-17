@@ -10,8 +10,9 @@ layout: default
 	</div>
 </div>
 <div class="row">
-  {{ post.content | truncatewords:175}}<br>
-  <h4><a href="{{ post.url }}">Read more...</a></strong><h4>
+  <span>{{ post.content | truncatewords:150}}<span>
+  <h4><a href="{{ post.url }}">Read more...</a></h4>
+  <hr />
 </div>
 {% endfor %}
 

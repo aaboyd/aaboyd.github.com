@@ -4,7 +4,6 @@ title: "Building this blog"
 tags : [jekyll, chocolatey, github]
 description : Building a blog with Jekyll, Github Pages, and Gumby Framework
 ---
-##Exploration of technologies
 ###Engine / Site Generator
 I work on Mac OS X at work, but often times find myself learning new technologies or "messing around" on a Windows 8.X machine.  So, I looked at a C# blog engine.  Didn't really find anything that was really simple to host and easy to modify (I am lazy, anything that required significant work, I gave up on).
 
