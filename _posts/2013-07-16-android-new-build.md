@@ -13,11 +13,11 @@ If you haven't seen / heard of the new android build system ( still work in prog
 
 ###Ant / Eclipse -> Gradle / IntelliJ
 This step was rather simple really.
-- Open the Project in Eclipse
-- File -> Export, Select Android -> Generate Gradle Build Files
-- Open IntelliJ and Import Project
-    - **Be sure to import from the Gradle files, not the Eclipse Project Files** 
-    - Use gradle wrapper, unless you have a compelling reason not to
+* Open the Project in Eclipse
+* File -> Export, Select Android -> Generate Gradle Build Files
+*Open IntelliJ and Import Project
+    * **Be sure to import from the Gradle files, not the Eclipse Project Files** 
+    * Use gradle wrapper, unless you have a compelling reason not to
     
 At this point you have the basic gradle build files and should be able to run
 {% highlight bash %}
