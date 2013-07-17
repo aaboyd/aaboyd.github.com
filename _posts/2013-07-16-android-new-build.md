@@ -11,7 +11,7 @@ If you haven't seen / heard of the new android build system ( still work in prog
 [Ant](http://ant.apache.com) has it's strengths, but the lack of IDE integration (can't run task and attach debugger and a pain to use with Eclipse) is really what has made me an early adopter of the new [Gradle](http://gradle.org) based build system.  I currently have an ant script that is powered by the default build that is packaged with the androd sdk.  I hijacked a few tasks to add the ```versionName``` and ```sourceVersion``` (build ID) to the output file.  Also, in the midst of the madness, I get the current revision number from [Mercurial](http://mercurial.selenic.com/) and use that as my build ID.  It has become very useful for traceability and for consistency in my builds.
 **If you can't build your Android project with one command then you should look into it.**
 
-###Ant / Eclipse <i class="right-bold"></i> Gradle / IntelliJ
+###Ant / Eclipse -> Gradle / IntelliJ
 This step was rather simple really.
 - Open the Project in Eclipse
 - File -> Export, Select Android -> Generate Gradle Build Files
