@@ -98,6 +98,16 @@ android {
 	}
 	...
 }
+
+android.applicationVariants.each { variant ->
+	if (variant.buildType.name.equals("release")) {
+		variant.outputFile = file(
+			"build/apk/"
+			+ project.name + "_"
+			+ android.defaultConfig.versionName + ".apk")
+	}
+}
+
 {% endhighlight %}
 
 <div style="text-decoration:line-through;margin-top:10px;">
