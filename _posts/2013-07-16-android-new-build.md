@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Moving to the New Android Build System"
-tags : [android, groovy, intellij]
+tags : [android, gradle, intellij, hg, git]
 description : Switching from Eclipse and Ant to IntelliJ / Android Studio and Gradle
 ---
 ###New Android Build System
@@ -75,6 +75,34 @@ If you run a release build you will now see all the proguard output.
 ###Integrating with SCM
 Mercurial offers a few different commands that might be valuable in adding build numbers.  Most are a variant of ```hg id```, which can easily be executed through Gradle.  Using the revision number might not always be the best option.  Below I will show how to get the numeric revision number as well as the unique ID of the commit in Mercurial.  Also, I give an option for using the git hash.
 
+<div class="alert warning" style="font-size:1.25em"><i class="icon-attention"> </i>Updating script to be much cleaner with advice from <a href="http://plus.google.com/u/1/+XavierDucrohet">Xavier Ducrohet</a></div>
+
+You will notice below I write the build number into my ```versionName``` property.  Using advice from the [Android Developer Tools Community](https://plus.google.com/u/1/101836723454902363467/posts/3DszV82h6TN) I was able to change the output file for release builds to contain the ```versionName```.
+
+{% highlight groovy %}
+def getBuildNumber()
+{
+  def os = new ByteArrayOutputStream()
+  exec {
+	// change to 'hg id -i' for the global revision id
+	// change to 'git rev-parse HEAD' for git hash
+    commandLine 'hg id -n'.split()
+    standardOutput = os;
+  }
+
+  return os.toString().replaceAll("\\s", "")
+}
+
+android {
+    defaultConfig {
+        versionCode 13
+        versionName "1.5.2 (" + getBuildNumber() + ")"
+    }
+    ...
+}
+{% endhighlight %}
+
+<div style="text-decoration:line-through;margin-top:10px;">
 You will notice below I write the build number in my strings.xml file.  Using advice from the [Android Developer Tools Community](https://plus.google.com/u/1/101836723454902363467/posts/3DszV82h6TN) I was able to change the output file of my release builds to contain both the ```versionName``` and ```sourceVersion``` (build ID).
 
 {% highlight groovy %}
@@ -117,7 +145,12 @@ zipalignRelease.doLast {
 
 {% endhighlight %}
 
-This is probably not the cleanest most efficient solution, but it works for the release builds I make.  Can quickly get what I need just by executing.
+
+
+This is probably not the cleanest most efficient solution, but it works for the release builds I make.</div>
+
+
+I can quickly get what I need just by executing.
 {% highlight bash %}
 ./gradlew clean assembleRelease
 {% endhighlight %}
