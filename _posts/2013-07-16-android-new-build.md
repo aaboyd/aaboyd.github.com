@@ -75,7 +75,7 @@ If you run a release build you will now see all the proguard output.
 ###Integrating with SCM
 Mercurial offers a few different commands that might be valuable in adding build numbers.  Most are a variant of ```hg id```, which can easily be executed through Gradle.  Using the revision number might not always be the best option.  Below I will show how to get the numeric revision number as well as the unique ID of the commit in Mercurial.  Also, I give an option for using the git hash.
 
-<div class="alert warning" style="font-size:1.25em"><i class="icon-attention"> </i>Updating script to be much cleaner with advice from <a href="http://plus.google.com/u/1/+XavierDucrohet">Xavier Ducrohet</a></div>
+<div class="alert warning" style="font-size:1.25em;font-weight:normal;"><i class="icon-attention"> </i>Updated script to be much cleaner with advice from <a href="http://plus.google.com/u/1/+XavierDucrohet">Xavier Ducrohet</a></div>
 
 You will notice below I write the build number into my ```versionName``` property.  Using advice from the [Android Developer Tools Community](https://plus.google.com/u/1/101836723454902363467/posts/3DszV82h6TN) I was able to change the output file for release builds to contain the ```versionName```.
 
