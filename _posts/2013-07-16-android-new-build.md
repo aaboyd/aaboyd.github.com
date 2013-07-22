@@ -80,25 +80,23 @@ Mercurial offers a few different commands that might be valuable in adding build
 You will notice below I write the build number into my ```versionName``` property.  Using advice from the [Android Developer Tools Community](https://plus.google.com/u/1/101836723454902363467/posts/3DszV82h6TN) I was able to change the output file for release builds to contain the ```versionName```.
 
 {% highlight groovy %}
-def getBuildNumber()
-{
-  def os = new ByteArrayOutputStream()
-  exec {
-	// change to 'hg id -i' for the global revision id
-	// change to 'git rev-parse HEAD' for git hash
-    commandLine 'hg id -n'.split()
-    standardOutput = os;
-  }
-
-  return os.toString().replaceAll("\\s", "")
+def getBuildNumber() {
+	def os = new ByteArrayOutputStream()
+	exec {
+		// change to 'hg id -i' for the global revision id
+		// change to 'git rev-parse HEAD' for git hash
+		commandLine 'hg id -n'.split()
+		standardOutput = os;
+	}
+	return os.toString().replaceAll("\\s", "")
 }
 
 android {
-    defaultConfig {
-        versionCode 13
-        versionName "1.5.2 (" + getBuildNumber() + ")"
-    }
-    ...
+	defaultConfig {
+		versionCode 13
+		versionName "1.5.2 (" + getBuildNumber() + ")"
+	}
+	...
 }
 {% endhighlight %}
 
@@ -108,13 +106,13 @@ You will notice below I write the build number in my strings.xml file.  Using ad
 {% highlight groovy %}
 
 task getSourceVersion {
-    def os = new ByteArrayOutputStream()
-    exec{
-    	// change to 'hg id -i' for the global revision id
-    	// change to 'git rev-parse HEAD' for git hash
-        commandLine 'hg id -n'.split()
-        standardOutput = os;
-    }
+	def os = new ByteArrayOutputStream()
+	exec{
+		// change to 'hg id -i' for the global revision id
+		// change to 'git rev-parse HEAD' for git hash
+		commandLine 'hg id -n'.split()
+		standardOutput = os;
+	}
     project.ext.sourceVersion = os.toString().replaceAll("\\s","")
 }
 
