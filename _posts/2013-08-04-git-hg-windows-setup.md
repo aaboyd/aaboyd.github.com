@@ -64,7 +64,7 @@ Both git and bitbucket can use ssh for establishing identity.
 ### Pageant SSH key on startup
 If you do a lot of development and would rahter not have to worry about running pageant and loading the ssh key everytime you want to do something, than you can create a script in your "startup" folder.  To locate the startup folder the fastest method I have found is to press ```win + r``` and type ```shell:startup``` and press enter.  This will get you to the correct folder.  For me I made a simple "Start Pageant.bat" script, that contains the following :
 {% highlight bat %}
-C:\path\to\pageant.exe "%HOMEDRIVE%%HOMEPATH%\.ssh\private.ppk"
+@powershell -Command "start-process pageant -NoNewWindow -PassThru -ArgumentList "$env:HOMEDRIVE$env:HOMEPATH\.ssh\private.ppk"
 {% endhighlight %}
 **Note :** make sure to change the path to the key file so that the correct ppk file is used by pageant.
 
