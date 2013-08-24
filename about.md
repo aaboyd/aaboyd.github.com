@@ -3,9 +3,8 @@ layout: page
 title : About
 group: navigation
 ---
-<div style="text-align:center">
-<h1><a href="http://aaboyd.github.io/assets/files/Alex Boyd Resume.pdf">Download Resume</a></h1>
-</div>
+<h2 style="text-align:center"><a href="http://aaboyd.github.io/assets/files/Alex Boyd Resume.pdf">Download Resume</a></h2>
+
 ## ![iRule](http://aaboyd.github.io/assets/img/irule.png) [iRule](http://iruleathome.com)
 I work at iRule, a small little company in the heart of Detroit, MI. We turn your smart phone / tablet into a complete universal remote solution.
 
