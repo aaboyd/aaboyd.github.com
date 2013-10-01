@@ -11,7 +11,7 @@ I work at iRule, a small little company in the heart of Detroit, MI. We turn you
 I was originally brought onto the team as a Software Engineer working on the Android side of IRule.  Since then I have been involved with iOS, Web, and Python development.
 
 ##School
-![iMSU](http://aaboyd.github.io/assets/img/msu.png) ![iUniversity of Michigan - Dearborn](http://aaboyd.github.io/assets/img/umd.png)
+![MSU](http://aaboyd.github.io/assets/img/msu.png) ![University of Michigan - Dearborn](http://aaboyd.github.io/assets/img/umd.png)
 
 I graduated from Michigan State University with a B.S. in Computer Science.  I had the privilege of working with Motorola Mobility on my [Senior Capstone Project](http://www.capstone.cse.msu.edu/2011-01/projects/motorola-mobility/).
 

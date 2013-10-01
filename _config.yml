@@ -1,7 +1,7 @@
 permalink: /:year/:month/:title 
 
 lsi: false
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "sass"]
 pygments: true
 
 url : http://aaboyd.github.io
@@ -17,10 +17,7 @@ author :
 comments :
   disqus :
     short_name : alexboydblog
-           
+
 analytics :
   google : 
     tracking_id : 'UA-34607589-1'
-    
-sharing :
-  provider : true
