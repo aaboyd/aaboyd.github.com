@@ -16,10 +16,24 @@
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="http://feeds.feedburner.com/github/YZdh" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-
   </head>
 
   <body>
+  <div class="navbar" id="main-nav" gumby-fixed="top">
+    <div class="row">
+      <!-- Toggle for mobile navigation, targeting the <ul> -->
+      <a class="toggle" gumby-trigger="#main-nav > .row > ul" href="#"><i class="icon-menu"></i></a>
+      <h3 class="six columns logo">
+        <a href="/">Alex Boyd</a>
+      </h3>
+      <ul class="ten columns pull_right">
+          <li><a href="/archive.html">Archive</a></li>
+	        <li><a href="/tags.html">Tags</a></li>
+	        <li><a href="/about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+  	<!--
   	<div class="row">
 		<article id="top-nav" class="valign row">
 			<div>
@@ -34,7 +48,6 @@
 			</div>
 		</article>
   	</div>
-<!-- 
 	<div class="row">
        <div class="danger alert">
          This site is still a work in progress <br /> I am aware things are broken :)
