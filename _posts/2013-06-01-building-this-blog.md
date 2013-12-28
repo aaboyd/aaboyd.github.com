@@ -17,7 +17,11 @@ The easiest quickest deployment option I have found was github pages, and that i
 
 ####Testing Deployment
 After a few commits, and slimming down the blog to it's bare necessities (I am a minimalist, so Jekyll Bootstrap was a good start but overkill), I was getting failures on github pages.  Because I am not a ruby guy, I needed to install and run jekyll on Windows (more difficult than Mac OS X or Linux).  I use [Chocolatey](http://chocolatey.org) which everyone should install :).  Here is a quick gist of what needs to be executed to get [Github Pages](http://pages.github.com) ready.
-<script src="https://gist.github.com/aaboyd/5696136.js"> </script>
+{% highlight bat %}
+cinst ruby | Out-Host
+cinst ruby.devkit | Out-Host
+cgem github-pages | Out-Host
+{% endhighlight %}
 
 
 *Getting the exact test environemnt used for github pages, made deployments easy to test.  Fixed a few layouts, fixed a few posts, and boom! site is now up and running.*
