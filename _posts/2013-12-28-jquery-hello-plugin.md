@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "jQuery Hello World with Structure"
+title: "jQuery Hello World Plugin with Structure"
 tags : [javascript, jquery]
 description : jQuery "Hello World" plugin with some structure
 ---
