@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="shade primary">
+<div>
 	<div class="row post_header">
    		{% if page.title %}<h1 class="title">{{ page.title }}</h1>{% endif %}
    		{% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
    		<h4 class="date">{{ page.date | date: "%B %e, %Y" }}</h4>
    </div>
 </div>
-<div class="shade default" style="text-align:center">
+<div style="text-align:center">
 	<div class="row">
 		<div class="six columns share">
 			<h5>Share
@@ -26,7 +26,7 @@ layout: default
 		<div class="eight columns tags">
 		   	<h5>Tags
 				{% for tag in page.tags %}
-					<a class="secondary badge" href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
+					<a class="primary badge" href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
 				{% endfor %}
 			</h5>
 		</div>
@@ -37,7 +37,6 @@ layout: default
 <div class="row" style="margin-top:10px">
 	<div class="content">{{ content }}</div>
 
-	<hr />
 	<div class="pagination" style="text-align: center">
 		{% if page.previous %}
 		<div class="large secondary btn icon-left entypo icon-left-open">

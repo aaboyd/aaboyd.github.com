@@ -26,84 +26,60 @@
       <h3 class="six columns logo">
         <a href="/">Alex Boyd</a>
       </h3>
-      <ul class="ten columns pull_right">
+      <ul class="six columns pull_right">
           <li><a href="/archive.html">Archive</a></li>
 	        <li><a href="/tags.html">Tags</a></li>
 	        <li><a href="/about.html">About</a></li>
       </ul>
     </div>
   </div>
-  	<!--
-  	<div class="row">
-		<article id="top-nav" class="valign row">
-			<div>
-				<h1><a href="/">Alex Boyd</a></h1>
-			</div>
-			<div>
-	  			<ul>
-	            	<li class="secondary btn"><a href="/archive.html">Archive</a></li>
-	            	<li class="secondary btn"><a href="/tags.html">Tags</a></li>
-	            	<li class="secondary btn"><a href="/about.html">About</a></li>
-				</ul>
-			</div>
-		</article>
-  	</div>
-	<div class="row">
-       <div class="danger alert">
-         This site is still a work in progress <br /> I am aware things are broken :)
-       </div>
-	</div>
-	 -->
+  
 	{{ content }}
-	
-     <div id="about" class="container shade default">
+
+	<div id="footer">
 		<div class="row">
-			<div class="push_three two column">
+			<div class="four columns">
 				<img alt="ME" src="http://aaboyd.github.io/assets/img/me.png" />
 			</div>
-			<div class="six column">
-				<p>
+			<div class="six columns">
+				<div>
 					<a href="/about.html">About Alex</a><br />
 					Sofware Engineer, Detroiter, Gamer, Sports fan<br />
 					Writing here to keep track of his thoughts, and maybe help someone along the way.
-				</p>
+				</div>
 				<span><a href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i></a></span>    
-        <span><a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i></a></span>
-        <span><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i></a></span>
-        <span><a href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i></a></span>
-        <span><a href="http://feeds.feedburner.com/github/YZdh" target="_blank"><i class="large icon-rss"></i></a></span>
+				<span><a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i></a></span>
+				<span><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i></a></span>
+				<span><a href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i></a></span>
+				<span><a href="http://feeds.feedburner.com/github/YZdh" target="_blank"><i class="large icon-rss"></i></a></span>
 			</div>
 		</div>
+		<hr />
+		<div class="row">        
+			This work by
+			<a href="http://alexboyd.me" rel="cc:attributionURL">Alex Boyd</a>
+			is licensed under a
+			<a style="font-size=0.75em" href="http://creativecommons.org/licenses/by/4.0/" rel="license">CC 4.0 License</a>
+			<a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+				<img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/4.0/80x15.png" style="border-width:0">
+			</a>  
+		</div>
 	</div>
-	
-    <div id="footer" class="container shade secondary">
-      <div class="row">
-        <footer class="centered eight column">          
-          This work by
-          <a href="http://alexboyd.me" rel="cc:attributionURL">Alex Boyd</a>
-          is licensed under a
-          <a style="font-size=0.75em" href="http://creativecommons.org/licenses/by/4.0/" rel="license">CC Attribution 4.0 International License</a>
-          <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
-            <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/4.0/80x15.png" style="border-width:0">
-          </a>
-        </footer>        
-      </div>
-    </div>
         
-    <script src="/assets/js/libs/jquery-1.9.1.min.js"></script>
-    <script src="/assets/js/libs/modernizr-2.6.2.min.js"></script>
-    <script gumby-path="/assets/js/libs" src="/assets/js/libs/gumby.min.js"></script>
-    <script src="/assets/js/libs/gumby.init.js"></script>
+	<script src="/assets/js/libs/jquery-1.9.1.min.js"></script>
+	<script src="/assets/js/libs/modernizr-2.6.2.min.js"></script>
+	<script gumby-path="/assets/js/libs" src="/assets/js/libs/gumby.min.js"></script>
+	<script src="/assets/js/libs/gumby.init.js"></script>
     
-    <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '{{ site.analytics.google.tracking_id }}']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-    </script>
+	<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '{{ site.analytics.google.tracking_id }}']);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+	</script>
   </body>
 </html>
