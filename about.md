@@ -3,12 +3,12 @@ layout: page
 title : About
 group: navigation
 ---
-<h2 style="text-align:center"><a href="http://aaboyd.github.io/assets/files/Alex Boyd Resume.pdf">Download Resume</a></h2>
+<h2 style="text-align:center"><a href="http://sdrv.ms/1b2GXeJ">Download Resume</a></h2>
 
-## ![iRule](http://aaboyd.github.io/assets/img/irule.png) [iRule](http://iruleathome.com)
-I work at iRule, a small little company in the heart of Detroit, MI. We turn your smart phone / tablet into a complete universal remote solution.
+## [Tiller](http://tillerapp.com)
+I work at Tiller, a San Francisco based startup.
 
-I was originally brought onto the team as a Software Engineer working on the Android side of IRule.  Since then I have been involved with iOS, Web, and Python development.
+I touch code from python to Objective-C to help create a better management tool for small fields service based companies.  My focus has been on front-end development, although much of my experience has been on the backend in the past.  In addition to front-end JS, I have written extensive amounts of SASS and HTML templates.  All this while still maintaining code on the backend.
 
 ##School
 ![MSU](http://aaboyd.github.io/assets/img/msu.png) ![University of Michigan - Dearborn](http://aaboyd.github.io/assets/img/umd.png)
