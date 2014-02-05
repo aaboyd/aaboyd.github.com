@@ -1,7 +1,7 @@
 permalink: /:year/:month/:title 
 
 lsi: false
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "sass"]
+exclude: ["README.md"]
 pygments: true
 
 url : http://alexboyd.me
