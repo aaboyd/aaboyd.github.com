@@ -3,6 +3,7 @@ permalink: /:year/:month/:title
 lsi: false
 exclude: ["README.md"]
 pygments: true
+encoding: utf-8
 
 url : http://alexboyd.me
 title : Alex Boyd
@@ -13,3 +14,5 @@ author :
   twitter : boydale1
   bitbucket : boydale1
   gplus : 101836723454902363467
+
+markdown: kramdown

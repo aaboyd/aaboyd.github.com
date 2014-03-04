@@ -35,9 +35,9 @@ layout: default
 </div>
 
 <div class="row" style="margin-top:10px">
-	<div class="content">{{ content }}</div>
+	{{ content }}
 
-	<div class="pagination" style="text-align: center">
+	<div class="pagination" style="margin-top:10px;text-align: center">
 		{% if page.previous %}
 		<div class="large secondary btn icon-left entypo icon-left-open">
 			<a href="{{ BASE_PATH }}{{ page.previous.url }}"
