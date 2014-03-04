@@ -22,54 +22,61 @@
 	</script>
   </head>
 
-  <body>
-  <div class="navbar" id="main-nav" gumby-fixed="top">
-    <div class="row">
-      <!-- Toggle for mobile navigation, targeting the <ul> -->
-      <a class="toggle" gumby-trigger="#main-nav > .row > ul" href="#"><i class="icon-menu"></i></a>
-      <h3 class="six columns logo">
-        <a href="/">Alex Boyd</a>
-      </h3>
-      <ul class="six columns pull_right">
-          <li><a href="/archive.html">Archive</a></li>
-	        <li><a href="/tags.html">Tags</a></li>
-	        <li><a href="/about.html">About</a></li>
-      </ul>
-    </div>
-  </div>
-  
-	{{ content }}
-
-	<div id="footer">
-		<div class="row">
-			<div class="four columns">
-				<img alt="ME" src="http://aaboyd.github.io/assets/img/me.png" />
-			</div>
-			<div class="six columns">
-				<div>
-					<a href="/about.html">About Alex</a><br />
-					Sofware Engineer, Detroiter, Gamer, Sports fan<br />
-					Writing here to keep track of his thoughts, and maybe help someone along the way.
-				</div>
-				<span><a href="http://github.com/{{ site.author.github }}" target="_blank"><i class="large icon-github"></i></a></span>    
-				<span><a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank"><i class="large icon-gplus"></i></a></span>
-				<span><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank"><i class="large icon-twitter"></i></a></span>
-				<span><a href="mailto:{{ site.author.email }}" target="_blank"><i class="large icon-mail"></i></a></span>
-				<span><a href="http://feeds.feedburner.com/github/YZdh" target="_blank"><i class="large icon-rss"></i></a></span>
-			</div>
-		</div>
-		<hr />
-		<div class="row">        
-			This work by
-			<a href="http://alexboyd.me" rel="cc:attributionURL">Alex Boyd</a>
-			is licensed under a
-			<a style="font-size=0.75em" href="http://creativecommons.org/licenses/by/4.0/" rel="license">CC 4.0 License</a>
-			<a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
-				<img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/4.0/80x15.png" style="border-width:0">
+  <body class="row">
+      <div id="left-nav" class="three columns">
+          <a href="/">
+              <img alt="ME" src="http://aaboyd.github.io/assets/img/me.png" />
+              Alex Boyd
+          </a>
+          <div id="about-snippet">
+              Sofware Engineer, Detroiter, Gamer, Sports fan.  
+              Writing here to keep track of my thoughts, and maybe help someone along the way.
+          </div>
+          <div>
+              <span>
+                  <a href="http://github.com/{{ site.author.github }}" target="_blank">
+                      <i class="large icon-github"></i>
+                  </a>
+              </span>
+              <span>
+                  <a href="http://plus.google.com/u/1/{{ site.author.gplus }}" target="_blank">
+                      <i class="large icon-gplus"></i>
+                  </a>
+              </span>
+              <span>
+                  <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank">
+                      <i class="large icon-twitter"></i>
+                  </a>
+              </span>
+              <span>
+                  <a href="mailto:{{ site.author.email }}" target="_blank">
+                      <i class="large icon-mail"></i>
+                  </a>
+              </span>
+              <span>
+                  <a href="http://feeds.feedburner.com/github/YZdh" target="_blank">
+                      <i class="large icon-rss"></i>
+                  </a>
+              </span>
+          </div>
+          <div class="menu-item"><a href="/archive.html">Archive</a></div>
+          <div class="menu-item"><a href="/tags.html">Tags</a></div>
+          <div class="menu-item"><a href="/about.html">About</a></div>
+      </div>
+      <div id="main" class="nine columns">
+          {{ content }}  
+          <div id="footer">
+              <hr />
+              This work by
+              <a href="http://alexboyd.me" rel="cc:attributionURL">Alex Boyd</a>
+              is licensed under a
+              <a style="font-size=0.75em" href="http://creativecommons.org/licenses/by/4.0/" rel="license">CC 4.0 License</a>
+              <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+                  <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/4.0/80x15.png" style="border-width:0">
 			</a>  
 		</div>
-	</div>
-        
+      </div>
+		 
 	<script src="/assets/js/libs/jquery-1.9.1.min.js"></script>
 	<script src="/assets/js/libs/modernizr-2.6.2.min.js"></script>
 	<script gumby-path="/assets/js/libs" src="/assets/js/libs/gumby.min.js"></script>

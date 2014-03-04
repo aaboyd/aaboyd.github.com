@@ -5,13 +5,11 @@ group: navigation
 ---
 <h2 style="text-align:center"><a href="http://sdrv.ms/1b2GXeJ">Download Resume</a></h2>
 
-## [Tiller](http://tillerapp.com)
-I work at Tiller, a San Francisco based startup.
-
-I touch code from python to Objective-C to help create a better management tool for small fields service based companies.  My focus has been on front-end development, although much of my experience has been on the backend in the past.  In addition to front-end JS, I have written extensive amounts of SASS and HTML templates.  All this while still maintaining code on the backend.
+## Work
+Coming Soon ...
 
 ##School
-![MSU](http://aaboyd.github.io/assets/img/msu.png) ![University of Michigan - Dearborn](http://aaboyd.github.io/assets/img/umd.png)
+![MSU](/assets/img/msu.png) ![University of Michigan - Dearborn](/assets/img/umd.png)
 
 I graduated from Michigan State University with a B.S. in Computer Science.  I had the privilege of working with Motorola Mobility on my [Senior Capstone Project](http://www.capstone.cse.msu.edu/2011-01/projects/motorola-mobility/).
 

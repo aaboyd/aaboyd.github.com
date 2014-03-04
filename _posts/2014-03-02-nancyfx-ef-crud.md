@@ -8,9 +8,10 @@ tags:
 - nancy
 - SQL
 ---
+<div class="alert success">Example Project on <a href="http://github.com/aaboyd/Dinner">Github</a></div>
 
 # Introduction
-NancyFx has recently become one of the most popular web development tools for C# developers.  It is largely inspired by ruby's sinatra, but this didn't mean much to me as I don't write any ruby stuff, but it is much more of a flask than a django if you come from the python world.  Getting back into C# and learning various web platforms and tools, I have found [NancyFx](http://nancyfx.org/) to be intuitive and it stays the hell out of my way.  If I want to do something my own way, I just do it.  It's one of the nicest web development libraries / frameworks I have used, I highly recommend it.  Shortly after any decent amount of web development a database is needed, I opted to go with a Microsoft supported framework in [Entity Framework](http://msdn.microsoft.com/en-us/data/ef.aspx).
+NancyFx has recently become one of the most popular web development tools for C# developers.  It is largely inspired by ruby's sinatra, but this didn't mean much to me as I don't write any ruby stuff, but it is much more of a flask than a django if you come from the python world.  Getting back into C# and learning various web platforms and tools, I have found [NancyFx](http://nancyfx.org/) to be intuitive and it stays the hell out of my way.  If I want to do something my own way, I just do it.  It's one of the nicest web development libraries / frameworks I have used, I highly recommend it.  Shortly after any decent amount of web development a database is needed, I opted to go with a Microsoft supported framework in [Entity Framework](http://msdn.microsoft.com/en-us/data/ef.aspx).  That leads me to this article, after a few hours trying to figure out how to build and test a simple application, I wrapped it up in a blog article.
 
 # Get Nancy and EntityFramework Up and Running
 Setting up NancyFx is simple and easy.  There are various resources around the web on this specific topic, but I will quickly run through it.
