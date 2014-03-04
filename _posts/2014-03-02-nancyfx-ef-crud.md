@@ -18,8 +18,8 @@ Setting up NancyFx is simple and easy.  There are various resources around the w
 ## Create Empty ASP.NET application
 Using the Visual Studio 2013 New Project Wizard, create a new empty ASP.NET application.
 
-<img class="six columns" src="/assets/img/nancyfx-ef-testing/create-project-1.png" />
-<img class="six columns" src="/assets/img/nancyfx-ef-testing/create-project-2.png" />
+<img class="six columns" src="/assets/img/nancyfx-ef-testing/create-proj-1.png" />
+<img class="six columns" src="/assets/img/nancyfx-ef-testing/create-proj-2.png" />
 
 ## Install Dependencies
 Using the Nuget Package Manager Console we can add all of our dependencies.
