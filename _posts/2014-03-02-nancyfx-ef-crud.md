@@ -201,7 +201,7 @@ Install-Package Nancy.Testing
 Install-Package EntityFramework.SqlServerCompact
 {% endhighlight %}
 
-We also will need to create a reference to our Dinner project.
+**We also will need to create a reference to our Dinner project.**
 
 ## (Re)Create Database before each test
 Each test will have it's own isolated version of the database.  To do this, we simply need to create a method and have it run before every test.  Here is what I came up with.  It's pretty self explanatory.
