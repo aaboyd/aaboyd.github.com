@@ -10,7 +10,9 @@ Well, to be honest, I wasn't exactly sure the name of these kinds of functions f
 
 >In computer programming, a variadic function is a function of indefinite arity, i.e., one which accepts a variable number of arguments. Support for variadic functions differs widely among programming languages. (stolen from [Wikipedia](http://en.wikipedia.org/wiki/Variadic_function))
 
-## iOS Libraries usage
+In the simplest of terms, it is a function that takes any number of arguments vs a function that takes a defined number of arguments.
+
+## iOS Library usage
 There are multiple places that you run into variadic functions when doing iOS development.  They are fairly simple to understand and use.  The variable parameter can contain a comma seperated list of values and must be `Nil` terminated.  Example below demonstratest creating a `UIAlertView` without any syntax
 
 {% highlight objc %}
