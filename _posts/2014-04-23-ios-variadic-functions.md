@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Variadic Objective-C Functions ( variable function parameters )"
-tags : [ios, objective-c]
-description : Objective-C Functions that accept a variable number of parameters / arguments
+tags: [ios, objective-c]
+description: Objective-C Functions that accept a variable number of parameters / arguments
+comments: true
 ---
 
 ## What are variadic functions?
@@ -30,22 +31,22 @@ Using these functions is simpler than creating your own function that accepts a 
 -(NSArray*) sort:(NSString*) values, ...
 {
     NSMutableArray* sortableItems = [[NSMutableArray alloc] init];
- 
+
     if( values == nil )
         return sortableItems;
-    
+
     va_list args;
     va_start(args, values);
-    
+
     NSString* str = values;
     do
     {
         [sortableItems addObject:str];
     }
     while( (str = va_arg(args,NSString*)) );
-    
+
     va_end(args);
-    
+
     return [sortableItems sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 {% endhighlight %}

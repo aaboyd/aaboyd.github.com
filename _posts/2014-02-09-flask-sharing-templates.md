@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Share Jinja2 Templates with the Browser using Nunjucks
-description: Sharing templates on the backend with jinja2 and on the client side with nunjucks, all inside flask
 date: 2014-02-09 02:23:49 -05:00
-tags: "python flask javascript nunjucks jinja2"
+tags: [python,flask,javascript,nunjucks,jinja2]
+description: Sharing templates on the backend with jinja2 and on the client side with nunjucks, all inside flask
+comments: true
 ---
 
 <div class="alert success">Example Project on <a href="http://github.com/aaboyd/flask-shared-templates">Github</a></div>
@@ -49,7 +50,7 @@ app.jinja_loader = ChoiceLoader([FileSystemLoader(os.path.join(base_dir, 'templa
 <br />
 
 ### Configure Nunjucks
-Download nunjucks from the [homepage](http://jlongster.github.io/nunjucks/).  There are a few different variants, for starting out I recommend the full version.  In the future you should read about [precompiled templates](http://jlongster.github.io/nunjucks/api.html#recommended-setups), and the recommended setups for production. 
+Download nunjucks from the [homepage](http://jlongster.github.io/nunjucks/).  There are a few different variants, for starting out I recommend the full version.  In the future you should read about [precompiled templates](http://jlongster.github.io/nunjucks/api.html#recommended-setups), and the recommended setups for production.
 
 Nunjucks is simple and will run as long as you tell it where to load the templates.  Simply make a call to [```nunjucks.compile```](http://jlongster.github.io/nunjucks/api.html#configure).  In your js file add the following line.
 

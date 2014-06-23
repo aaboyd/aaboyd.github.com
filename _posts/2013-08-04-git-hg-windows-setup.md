@@ -3,6 +3,7 @@ layout: post
 title: Windows Github and Bitbucket setup
 date: 2013-08-04 17:57:47 -07:00
 tags: [git, github, hg, bitbucket, windows, ssh, putty]
+comments: true
 ---
 
 After I installed the Windows 8.1 update, and I kind of destroyed my machine and had to re-install Windows fresh.  This was pretty easy, but I lost all the configuration I had setup for developing with [Github](http://github.com) and [Bitbucket](http://bitbucket.org).
@@ -79,6 +80,3 @@ To use the plink with hg you must add it to the mercurial config file.  This is 
 Now that you are ready to contribute, go make your mark on the internet community!
 
 I just started to really try and get involved in some open source software.  It has been pretty rewarding and a great learning experience.  I would recommend it to any software engineer, inexperienced or expert.
-
-
-

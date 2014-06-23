@@ -1,4 +1,4 @@
-permalink: /:year/:month/:title 
+permalink: /:year/:month/:title
 
 lsi: false
 exclude: ["README.md"]
@@ -16,3 +16,5 @@ author :
   gplus : 101836723454902363467
 
 markdown: kramdown
+
+enable_disqus: true

@@ -1,16 +1,24 @@
 ---
 layout: post
 title: "Where is my Android Application, Foreground or Background?"
+date: 2014-06-23 01:34:00 -05:00
 tags : [java, android]
 description : One way to detect if your android application is in the foreground or background.
+comments : true
 ---
 
+## The Problem
 Detecting if an Android application is in the foreground or the background seems like it might be obvious, but it actually isn't as easy of a problem as I thought.
 
+
+### Working on older devices
 Android has come a long way from it's 2.X days, but there are still a lot of users out there looking for good apps that have 2.3.X devices ( I have given up on 2.2 ).  So, I was looking for the best way to see if an app is in the foreground or the background.  There are few different approaches discussed on this stackoverflow post : [Android: Is Application running in background?](http://stackoverflow.com/questions/3667022/android-is-application-running-in-background/5862048).  The solution I came up with is mostly adapted from that post, but it involves implementing reference counting in the activities manually.
 
+### Copying an existing solution
 [ActivityLifecycleCallbacks](http://developer.android.com/reference/android/app/Application.ActivityLifecycleCallbacks.html) are all that one really needs to make their application aware of when an activity lifecycle event happens.  So, mimmicking it's behaviour is what I set out to do.
 
+
+## The implementation
 The implementation will involve two classes.  The GlobalApplication object derives from [Application](http://developer.android.com/reference/android/app/Application.html).  The other class needs to be the base of all your activity classes.
 
 The GlobalApplication is fairly simple.  It implements two methods to be called when an activity is resumed and when an activity is paused.

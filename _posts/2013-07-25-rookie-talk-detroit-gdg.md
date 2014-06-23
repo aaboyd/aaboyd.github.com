@@ -2,7 +2,8 @@
 layout: post
 title: "Rookie Talk at Detroit Google Developers Group"
 tags : [talk, gwt, Detroit]
-description : First experience speaking in front of a crowd about a techincal topic (Google Web Toolkit).
+description : First exper ience speaking in front of a crowd about a techincal topic (Google Web Toolkit).
+comments : true
 ---
 
 ## How I got the gig
@@ -19,7 +20,7 @@ This one may seem a bit obvious, but making assumptions can really hurt you in t
 I did a poor job of this, and I don't wish to make that mistake again.  I had the opportunity to go look and test the environment that I was speaking in, but I sadly didn't take that opportunity.  Fortunately, nothing went completely wrong.  Two things I can think of :
 1. I have a standing desk at work and prefer standing, so naturally when I was speaking I wanted to stand.  No tall deks were available, making it rather difficult to see my screen.
 2. The projectors were 16:9 or maybe 16:10 aspect ratio, and my presentation was 4:3 which was suboptimal.  Those things easily could have been avoided with some better preperation.
- 
+
 ### Prepare a Presentation, not a Slideshow
 Some presentations tend to be pretty much a regurgitation of what is written on the slides.  If you attended College, I am sure you have had some exposure to this kind of thing.  Slides are complimentary to whatever idea you are trying to present.  If everything you have to say is in the slideshow, don't bother showing up just email everyone the pdf.
 

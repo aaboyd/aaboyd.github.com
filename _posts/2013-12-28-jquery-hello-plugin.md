@@ -1,14 +1,16 @@
 ---
 layout: post
 title: "jQuery Hello World Plugin with Structure"
-tags : [javascript, jquery]
-description : jQuery "Hello World" plugin with some structure
+tags: [javascript, jquery]
+description: jQuery "Hello World" plugin with some structure
+comments: true
 ---
+
 ## jQuery, a necessary language extension
 My first brushes with Javascript were through [GWT (Google Web Toolkit)](http://www.gwtproject.org/).  I was unaware of how closely related and intermingled JavaScript and [jQuery](http://jquery.com/) have become.  Many job postings list jQuery in the section right along with other languages.  Even if you decide not to use jQuery, or decide to use a lighter alternative like [Zepto.js](http://zeptojs.com/), the principals for plugins and overall architecture are lessons that can be applied elsewhere.
 
 ## Motivation
-Recently, having started a new job and picking up a lot of frontend work, I have been working with a lot of jQuery and jQuery plugins.  3rd party libraries, other devs, and I all have our own styles.  So I set out to provide some structure and organization into my life.  Here is my attempt at writing a jQuery "Hello World" plugin to use as my template for future jQuery plugins. 
+Recently, having started a new job and picking up a lot of frontend work, I have been working with a lot of jQuery and jQuery plugins.  3rd party libraries, other devs, and I all have our own styles.  So I set out to provide some structure and organization into my life.  Here is my attempt at writing a jQuery "Hello World" plugin to use as my template for future jQuery plugins.
 
 ## Let the code do the talking
 All the code can be found on github at [https://github.com/aaboyd/jquery-hello-plugin](https://github.com/aaboyd/jquery-hello-plugin).  It is commented a lot to help explain the reasoning and logic behind the structure.
@@ -37,7 +39,7 @@ $.extend(Hello.prototype, {
   _init : function () {
     ...
   },
-    
+
   sayHello : function (name) {
     ...
   },
@@ -55,7 +57,7 @@ var defaultOptions = {
 var Hello = function ($elem, options) {
 
   this.settings = $.extend({}, defaultOptions, options);
-  
+
   this._init();
 }
 {% endhighlight %}
@@ -107,5 +109,3 @@ I read a lot of different resources to come up with the following template.  I h
 * [Essential jQuery Plugin Patterns](http://coding.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/)
 * [jQuery Plugin with methods](http://stackoverflow.com/questions/1117086/how-to-create-a-jquery-plugin-with-methods)
 * [jQuery Plugin loaded with Require.js](http://stackoverflow.com/questions/10918063/how-to-make-a-jquery-plugin-loadable-with-requirejs)
-
-

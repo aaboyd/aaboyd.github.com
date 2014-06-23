@@ -3,6 +3,7 @@ layout: post
 title: Using GWT Super Dev Mode / Source Maps
 tags: [gwt, sourcemaps]
 description: Quick guide to get up and running with GWT Super Dev Mode and Source Maps in Google Chrome
+comments: true
 ---
 
 <div class="alert warning" style="font-size:1.25em;font-weight:normal;"><i class="icon-attention"> </i>Updated with various improvements from <a href="https://plus.google.com/u/1/101836723454902363467/posts/bHD9xWqkWKc">Google+ comments</a></div>
@@ -60,14 +61,13 @@ You need to serve the HTML file somehow.  The simplest and quickest way I found 
 {% highlight bash %}
 python -m SimpleHTTPServer
 {% endhighlight %}
- 
+
 
 ###Enable Source Maps in Chrome
 	1. Open chrome dev tools
     2. Open Settings (gear in bottom right of dev tools)
     3. In "Source" section, enable source maps
-    
+
 If you notice you can navigate and step through both the Java code and jsni methods (something that was never available before).  Also, recompiling the module is as easy as clicking "Dev Mode On" again and compiling the new module.  Compilations are much quicker than full GWT compiles.  The incremental builds save a lot of time.
 
 Even if the Eclipse/IntelliJ plugin paired with chrome's plugin are good enough for you, source maps still have some advantages.  Source maps appear to be a new techonology that will be used more and more, so getting familiar with using it now should benefit you in the future.
-

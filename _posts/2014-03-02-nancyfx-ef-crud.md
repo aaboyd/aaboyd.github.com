@@ -2,11 +2,8 @@
 layout: post
 title: NancyFx with Entity Framework
 description: NancyFx with Entity Framework.  A simple CRUD NancyModule using EntityFramework and includes integration testing.
-tags:
-- C#
-- entity framework
-- nancy
-- SQL
+tags: [C#,entity framework,nancy,SQL]
+comments: true
 ---
 <div class="alert success">Example Project on <a href="http://github.com/aaboyd/Dinner">Github</a></div>
 
@@ -98,7 +95,7 @@ namespace AlexBoyd.Dinner
 
     public IDbSet<Dinner> Dinners { get; set; }
 
-    protected override void OnModelCreating(DbModelBuilder builder) 
+    protected override void OnModelCreating(DbModelBuilder builder)
     {
       builder.Entity<Dinner>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
       builder.Entity<Dinner>().HasKey(d => d.Id);
@@ -194,7 +191,7 @@ Using the "New Project Wizard" create a new UnitTest project, call it Dinner.Tes
 
 Even though this is a UnitTest project these are actually a bit more like integration tests.  We won't be mocking our DbContext, but rather using a file database (SQLCE) for each test.  I have not tried this with other DB's like SQLite, but in theory everything should work fine.
 
-## Install Dependencies ( Nancy.Testing, EntityFramework, 
+## Install Dependencies ( Nancy.Testing, EntityFramework,
 In the package manager console, execute the following commands.
 
 {% highlight powershell %}
@@ -450,7 +447,7 @@ namespace AlexBoyd.Dinner
 
         ctx.Dinners.Add(dinner);
         ctx.SaveChanges();
-        
+
         return HttpStatusCode.OK;
       };
 
