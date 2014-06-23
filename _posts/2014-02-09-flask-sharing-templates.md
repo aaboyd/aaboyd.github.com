@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Share Jinja2 Templates with the Browser using Nunjucks
-date: 2014-02-09 02:23:49 -05:00
 tags: [python,flask,javascript,nunjucks,jinja2]
 description: Sharing templates on the backend with jinja2 and on the client side with nunjucks, all inside flask
 comments: true
