@@ -3,7 +3,7 @@ permalink: /:year/:month/:title
 timezone: America/New_York
 lsi: false
 exclude: ["README.md"]
-pygments: true
+highlighter: true
 encoding: utf-8
 
 url : http://alexboyd.me

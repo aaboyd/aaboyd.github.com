@@ -52,7 +52,12 @@ After running the CodeServer application you will get a  message with the URL th
 ### <span style="text-decoration:line-through">Modifying and</span> Serving your HTML file
 <span style="text-decoration:line-through">The HTML file that hosts your application, will have to be modified.  In Step 2 of the Source Maps server instructions, it tells you to visit a page that uses one of the modules.  To me this was a bit misleading, because at this point, nothing is actually serving your HTML file.
 
-First, modify your Host HTML page to redirect the {% highlight xml %}<script src="module/module.nocache.js"></script>{% endhighlight %} to your Source Maps server : {% highlight xml %}<script src="http://localhost:9876/module/module.nocache.js"></script>{% endhighlight %}.
+First, modify your Host HTML page to redirect the
+{% highlight xml %}
+<script src="module/module.nocache.js"></script>
+{% endhighlight %} to your Source Maps server :
+
+{% highlight xml %}<script src="http://localhost:9876/module/module.nocache.js"></script>{% endhighlight %}.
 
 After you have redirected your page to load the correct ".js" files,</span>
 

@@ -36,6 +36,7 @@ I personally never thought I would be a speaker, and am still not sure I will be
 The one thing I think that this has really shown me is that I need to get involved.  My excuse has always been school and work are too much, well that excuse is gone.  There are good people and good things to learn, especially in Detroit, MI.  I love learning and for that reason I really see myself attending more and more events in Detroit.
 
 If nerves are what is stopping you from speaking publicly, remember
-<span class="alert primary" style="padding:0.25em" >You Miss 100% of the Shots You Don't Take   - Wayne Gretzky</span>.
+
+> You Miss 100% of the Shots You Don't Take <cite>Wayne Gretzky</cite>
 
 ####[Slides](https://speakerdeck.com/aaboyd/google-web-toolkit-in-practice)

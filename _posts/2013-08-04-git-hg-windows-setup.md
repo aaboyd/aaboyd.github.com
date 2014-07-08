@@ -10,7 +10,8 @@ After I installed the Windows 8.1 update, and I kind of destroyed my machine and
 
 So, here is the quickest way I found to get setup and ready to contribute on [Github](http://github.com) and [Bitbucket](http://bitbucket.org).
 
-##Installation of Tools
+## Installation of Tools
+
 ### SSH
 To solve my ssh requirement, which I use for both git and mercurial, I simply installed [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/), which I belive is pretty standard for ssh on windows.  I opted to go with the [Putty Installer](http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.62-installer.exe).  It should install a few different tools that will be necessary in the future.
 
@@ -36,9 +37,10 @@ cinst hg
 {% endhighlight %}
 
 ### GUI Client
-If you like GUI based tools for source management, I would recommend [SourceTree](http://www.sourcetreeapp.com/), which I discovered when I started developing on a Macbook Pro.  It has since been ported to Windows and is getting regular updates.  It works well with both Git and Hg.  Also, allows you to connect your github and/or bitbucket account.  Of course there are alternatives, like the tortoise family of GUI's ( [TortoiseGit](http://code.google.com/p/tortoisegit/) and [TortoiseHg](http://tortoisehg.bitbucket.org/) ).
+If you like GUI based tools for source management, I would recommend [SourceTree](http://www.sourcetreeapp.com/), which I discovered when I started developing on a Macbook Pro.  It has since been ported to Windows and is getting regular updates.  It works well with both Git and Hg.  Also, allows you to connect your github and/or bitbucket account.  Of course there are alternatives, like tortoise GUI's ( [TortoiseGit](http://code.google.com/p/tortoisegit/) and [TortoiseHg](http://tortoisehg.bitbucket.org/) ).
 
-##Configure Accounts
+## Configure Accounts
+
 ### SSH key generation
 Open up puttygen, which was installed with the putty installer as well as the chocolatey install.  Click generate and then follow the instructions ( you have to move your mouse randomly ).  After the key is generated, you should save the private key and copy the public key info near the top of the puttygen dialog.  I chose to save them in a ```.ssh``` directory in my home directory ( this is consistent with Linux and Mac based systems ).
 
@@ -70,11 +72,14 @@ If you do a lot of development and would rahter not have to worry about running 
 **Note :** make sure to change the path to the key file so that the correct ppk file is used by pageant.
 
 ### SSH config for hg and git
-####Git
+
+#### Git
 To use the correct agent for SSH with Git for Windows you need to set an environment variable.  Add an environment variable GIT_SSH=\Path\to\plink.exe.  Plink will use the ssh key that was loaded into pageant.
 
-####Mercurial
-To use the plink with hg you must add it to the mercurial config file.  This is pretty simple, open up the mercurial.ini file that is located in your home directory.  Under the ```[ui]``` section, add ```ssh=plink -ssh```.  Also, if you want command line capabilities with Mercurial you will need to add it to your PATH environment variables, this is not done during the installation.
+#### Mercurial
+To use the plink with hg you must add it to the mercurial config file.  This is pretty simple, open up the mercurial.ini file that is located in your home directory.  Under the [ui] section, add
+{% highlight shell %}ssh=plink -ssh{% endhighlight shell %}
+Also, if you want command line capabilities with Mercurial you will need to add it to your PATH environment variables, this is not done during the installation.
 
 ## Start developing!
 Now that you are ready to contribute, go make your mark on the internet community!
