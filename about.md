@@ -3,7 +3,7 @@ layout: page
 title : About
 group: navigation
 ---
-<h2 style="text-align:center"><a href="http://sdrv.ms/1b2GXeJ">Download Resume</a></h2>
+<h2 style="text-align:center"><a href="http://1drv.ms/1y3VPRU">Download Resume</a></h2>
 
 ## Work
 Coming Soon ...
