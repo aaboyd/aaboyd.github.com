@@ -3,7 +3,6 @@ layout: post
 title: "Rookie Talk at Detroit Google Developers Group"
 tags : [talk, gwt, Detroit]
 description : First exper ience speaking in front of a crowd about a techincal topic (Google Web Toolkit).
-comments : true
 ---
 
 ## How I got the gig

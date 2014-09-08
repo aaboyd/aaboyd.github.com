@@ -3,7 +3,6 @@ layout: post
 title: "Variadic Objective-C Functions ( variable function parameters )"
 tags: [ios, objective-c]
 description: Objective-C Functions that accept a variable number of parameters / arguments
-comments: true
 ---
 
 ## What are variadic functions?

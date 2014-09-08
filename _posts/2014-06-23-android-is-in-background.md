@@ -3,7 +3,6 @@ layout: post
 title: "Where is my Android Application, Foreground or Background?"
 tags : [java, android]
 description : One way to detect if your android application is in the foreground or background.
-comments : true
 ---
 
 ## The Problem

@@ -3,7 +3,6 @@ layout: post
 title: "Object-Oriented Javascript … A First Attempt"
 tags: [javascript]
 description: Learning to create and use JavaScript coming from a C/C++, Objective-C and Java background.
-comments: true
 ---
 
 ## Non-JavaScript Background

@@ -3,7 +3,6 @@ permalink: /:year/:month/:title
 timezone: America/New_York
 lsi: false
 exclude: ["README.md"]
-highlighter: true
 encoding: utf-8
 
 url : http://alexboyd.me
@@ -17,5 +16,3 @@ author :
   gplus : 101836723454902363467
 
 markdown: kramdown
-
-enable_disqus: true

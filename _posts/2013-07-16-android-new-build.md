@@ -3,7 +3,6 @@ layout: post
 title: "Moving to the New Android Build System"
 tags : [android, gradle, intellij, hg, git]
 description : Switching from Eclipse and Ant to IntelliJ / Android Studio and Gradle
-comments : true
 ---
 ###New Android Build System
 If you haven't seen / heard of the new android build system ( still work in progress ), then you should definitely go read up on it.  There is some great material on the [Android Tools Project Site](http://tools.android.com/tech-docs/new-build-system).

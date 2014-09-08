@@ -3,7 +3,6 @@ layout: post
 title: "Build Bridges, Don't Burn Them"
 tags: [career]
 description: A real life story of why burning bridges is bad, and how I am grateful I haven't burned mine.
-comments: true
 ---
 
 ## Building the Bridge

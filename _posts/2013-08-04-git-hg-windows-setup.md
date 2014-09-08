@@ -3,7 +3,6 @@ layout: post
 title: Windows Github and Bitbucket setup
 date: 2013-08-04 17:57:47 -07:00
 tags: [git, github, hg, bitbucket, windows, ssh, putty]
-comments: true
 ---
 
 After I installed the Windows 8.1 update, and I kind of destroyed my machine and had to re-install Windows fresh.  This was pretty easy, but I lost all the configuration I had setup for developing with [Github](http://github.com) and [Bitbucket](http://bitbucket.org).
@@ -78,7 +77,7 @@ To use the correct agent for SSH with Git for Windows you need to set an environ
 
 #### Mercurial
 To use the plink with hg you must add it to the mercurial config file.  This is pretty simple, open up the mercurial.ini file that is located in your home directory.  Under the [ui] section, add
-{% highlight shell %}ssh=plink -ssh{% endhighlight shell %}
+{% highlight bash %}ssh=plink -ssh{% endhighlight %}
 Also, if you want command line capabilities with Mercurial you will need to add it to your PATH environment variables, this is not done during the installation.
 
 ## Start developing!

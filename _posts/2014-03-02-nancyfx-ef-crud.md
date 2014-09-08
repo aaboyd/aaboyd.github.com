@@ -3,7 +3,6 @@ layout: post
 title: NancyFx with Entity Framework
 description: NancyFx with Entity Framework.  A simple CRUD NancyModule using EntityFramework and includes integration testing.
 tags: [C#,entity framework,nancy,SQL]
-comments: true
 ---
 <div class="alert success">Example Project on <a href="http://github.com/aaboyd/Dinner">Github</a></div>
 

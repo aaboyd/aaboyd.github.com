@@ -3,7 +3,6 @@ layout: post
 title: Using GWT Super Dev Mode / Source Maps
 tags: [gwt, sourcemaps]
 description: Quick guide to get up and running with GWT Super Dev Mode and Source Maps in Google Chrome
-comments: true
 ---
 
 <div class="alert warning" style="font-size:1.25em;font-weight:normal;"><i class="icon-attention"> </i>Updated with various improvements from <a href="https://plus.google.com/u/1/101836723454902363467/posts/bHD9xWqkWKc">Google+ comments</a></div>

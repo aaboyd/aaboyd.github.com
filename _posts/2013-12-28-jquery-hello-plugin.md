@@ -3,7 +3,6 @@ layout: post
 title: "jQuery Hello World Plugin with Structure"
 tags: [javascript, jquery]
 description: jQuery "Hello World" plugin with some structure
-comments: true
 ---
 
 ## jQuery, a necessary language extension
