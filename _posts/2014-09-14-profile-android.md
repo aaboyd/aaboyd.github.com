@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Profile Android App Before You Need To"
+title: "Profile Android Your App Before You Need To"
 tags : [java, android]
 description : Learn the android tools and use them before you need to.
 ---
