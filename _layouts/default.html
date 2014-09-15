@@ -5,10 +5,10 @@
     <title>{{ page.title }}{% if page.tagline %} - {{ page.tagline }}{% endif %}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
-    
+
     <!-- Don't read titles from open directory project -->
     <meta name=”robots” content=”noodp”>
-    
+
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,7 +32,7 @@
               Alex Boyd
           </a>
           <div id="about-snippet">
-              Sofware Engineer, Detroiter, Gamer, Sports fan.  
+              Sofware Engineer, Detroiter, Gamer, Sports fan.
               Writing here to keep track of my thoughts, and maybe help someone along the way.
           </div>
           <div id="social-icons">
@@ -71,7 +71,7 @@
           <div class="menu-item"><a href="/about.html">About</a></div>
       </div>
       <div id="main" class="nine columns">
-          {{ content }}  
+          {{ content }}
           <div id="footer">
               <hr />
               This work by
@@ -80,24 +80,23 @@
               <a style="font-size=0.75em" href="http://creativecommons.org/licenses/by/4.0/" rel="license">CC 4.0 License</a>
               <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
                   <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/4.0/80x15.png" style="border-width:0">
-			</a>  
+			</a>
 		</div>
       </div>
-		 
+
 	<script src="/assets/js/libs/jquery-1.9.1.min.js"></script>
 	<script src="/assets/js/libs/modernizr-2.6.2.min.js"></script>
 	<script gumby-path="/assets/js/libs" src="/assets/js/libs/gumby.min.js"></script>
 	<script src="/assets/js/libs/gumby.init.js"></script>
-	
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-34607589-1', 'alexboyd.me');
-  ga('require', 'displayfeatures');
-  ga('send', 'pageview');
-	</script>
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-34607589-1', 'auto');
+ga('send', 'pageview');
+    </script>
   </body>
 </html>
