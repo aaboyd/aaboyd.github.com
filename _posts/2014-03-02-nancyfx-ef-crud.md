@@ -4,7 +4,7 @@ title: NancyFx with Entity Framework
 description: NancyFx with Entity Framework.  A simple CRUD NancyModule using EntityFramework and includes integration testing.
 tags: [C#,entity framework,nancy,SQL]
 ---
-<div class="alert success">Example Project on <a href="http://github.com/aaboyd/Dinner">Github</a></div>
+<div class="alert alert-success">Example Project on <a href="http://github.com/aaboyd/Dinner">Github</a></div>
 
 # Introduction
 NancyFx has recently become one of the most popular web development tools for C# developers.  It is largely inspired by ruby's sinatra, but this didn't mean much to me as I don't write any ruby stuff, but it is much more of a flask than a django if you come from the python world.  Getting back into C# and learning various web platforms and tools, I have found [NancyFx](http://nancyfx.org/) to be intuitive and it stays the hell out of my way.  If I want to do something my own way, I just do it.  It's one of the nicest web development libraries / frameworks I have used, I highly recommend it.  Shortly after any decent amount of web development a database is needed, I opted to go with a Microsoft supported framework in [Entity Framework](http://msdn.microsoft.com/en-us/data/ef.aspx).  That leads me to this article, after a few hours trying to figure out how to build and test a simple application, I wrapped it up in a blog article.
@@ -20,8 +20,7 @@ Using the Visual Studio 2013 New Project Wizard, create a new empty ASP.NET appl
 
 ## Install Dependencies
 Using the Nuget Package Manager Console we can add all of our dependencies.
-{% highlight powershell %}
-Install-Package Nancy.Hosting.Aspnet
+{% highlight powershell %}Install-Package Nancy.Hosting.Aspnet
 Install-Package Nancy.Serialization.JsonNet
 Install-Package EntityFramework
 {% endhighlight %}
@@ -29,8 +28,7 @@ Install-Package EntityFramework
 ## Create Your First NancyModule
 Create file called NancyModule inside your ```Dinner``` project.
 
-{% highlight csharp %}
-using Nancy;
+{% highlight csharp %}using Nancy;
 
 namespace AlexBoyd.Dinner
 {
@@ -60,8 +58,7 @@ A POCO can be used for an EntityFramework model which will be mapped to a table 
 
 Create a POCO called Dinner.  I borrowed some of this from the fairly popular example project [Nerd Dinner](http://www.nerddinner.com/).  Here is my POCO.
 
-{% highlight csharp %}
-using System;
+{% highlight csharp %}using System;
 
 namespace AlexBoyd.Dinner
 {
@@ -74,7 +71,7 @@ namespace AlexBoyd.Dinner
     public string HostedBy { get; set; }
   }
 }
-{% endhighlight  %}
+{% endhighlight %}
 
 ## Create DBContext
 A DBContext is the primary class that is responsible for interacting with your SQL Database.  To read more on this and how it relates to your POCO's and your SQL Database, check out [Microsoft's article](http://msdn.microsoft.com/en-us/data/jj729737.aspx).
@@ -122,8 +119,7 @@ Nancy comes with some built-in AutoRegister functionality.  If you create an int
 
 Let's extract an interface from our DbContext with some methods we will need.
 
-{% highlight csharp %}
-public interface IMyContext
+{% highlight csharp %}public interface IMyContext
 {
   IDbSet<Dinner> Dinners { get; set; }
 
@@ -134,8 +130,7 @@ public interface IMyContext
 
 And of course, lets implement this interface in our context class.
 
-{% highlight csharp %}
-public class MyContext : DbContext, IMyContext
+{% highlight csharp %}public class MyContext : DbContext, IMyContext
 {
   ...
 }
@@ -143,8 +138,7 @@ public class MyContext : DbContext, IMyContext
 
 Lastly, add the IMyContext as a dependency in our module.
 
-{% highlight csharp %}
-public DinnerModule(IMyContext ctx) : base("/dinner")
+{% highlight csharp %}public DinnerModule(IMyContext ctx) : base("/dinner")
 {
   ...
 }
@@ -157,8 +151,7 @@ Now that we have configured the application to use Nancy and allow us to interac
 ## Add CRUD Skeleton
 Setting up some simple CRUD operations in Nancy couldn't be simpler.  Trying to stay (somewhat) true to REST principles, I will layout some skeleton code for a REST interface to our Dinner POCO.
 
-{% highlight csharp %}
-public class DinnerModule : NancyModule
+{% highlight csharp %}public class DinnerModule : NancyModule
 {
   public DinnerModule(IMyContext ctx) : base("/dinner")
   {

@@ -1,0 +1,38 @@
+{
+    "folders":
+    [
+    {
+        "name": "Root",
+        "path": ".",
+        "folder_exclude_patterns": ["_*", "assets"]
+    },
+    {
+        "name": "Posts",
+        "path": "_posts"
+    },
+    {
+        "name": "Layouts",
+        "path": "_layouts"
+    },
+    {
+        "name": "Includes",
+        "path": "_includes"
+    },
+    {
+        "name": "Assets",
+        "path": "assets"
+    },
+    {
+        "name": "Data",
+        "path": "_data"
+    },
+    {
+        "name": "Plugins",
+        "path": "_plugins"
+    },
+    {
+        "name": "Other",
+        "path": ".",
+        "folder_exclude_patterns": ["_*", "assets"]
+    }]
+}

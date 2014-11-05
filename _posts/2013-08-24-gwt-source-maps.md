@@ -5,12 +5,12 @@ tags: [gwt, sourcemaps]
 description: Quick guide to get up and running with GWT Super Dev Mode and Source Maps in Google Chrome
 ---
 
-<div class="alert warning" style="font-size:1.25em;font-weight:normal;"><i class="icon-attention"> </i>Updated with various improvements from <a href="https://plus.google.com/u/1/101836723454902363467/posts/bHD9xWqkWKc">Google+ comments</a></div>
+<div class="alert alert-warning" style="font-size:1.25em;font-weight:normal;"><i class="icon-attention"> </i>Updated with various improvements from <a href="https://plus.google.com/u/1/101836723454902363467/posts/bHD9xWqkWKc">Google+ comments</a></div>
 One of the biggest gripes I have run into with the [Google Web Toolkit](http://gwtproject.com) is the ability to debug without having to re-compile, clear cache, and be stuck on the Java side of the debugger ( if you use JSNI, you can't really debug it with Eclipse plugin).  Also, the browser plugin often gets broken with new versions of Chrome, and Firefox.  It is not the most "seemless" experience, so I looked for a better option.  Super dev mode works nice in Chrome, which is what I use for GWT development.
 
 GWT has now added support for source maps ( more info on source maps [here](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)).  In my eyes it is the future of all [Languages that compile to Javascript](https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS).  When supported, it will allow GWT to be debugged in any browser.  I believe Firefox and Chrome currently support it.  I wouldn't be surprised if IE adds support becuase of Microsoft's Typescript.
 
-<div class="alert danger">GWT's Super Dev Mode is only supported in GWT 2.5+.  If you have not upgraded, please upgrade before attempting Super Dev Mode</div>
+<div class="alert alert-danger">GWT's Super Dev Mode is only supported in GWT 2.5+.  If you have not upgraded, please upgrade before attempting Super Dev Mode</div>
 
 ###Prepare to use Source Maps
 To use Source Maps you have to make a few modifications to your ".gwt.xml" file.

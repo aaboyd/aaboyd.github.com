@@ -8,7 +8,7 @@ description: Learning to create and use JavaScript coming from a C/C++, Objectiv
 ## Non-JavaScript Background
 I come from  a C/C++ background which later became Objective-C and Java (iOS and Android).  I haven't done a ton of web work, but most of the web stuff i have done I used the [Google Web Toolkit](http://gwtproject.com), which provides Java to JavaScript transcompilation.  I have never gotten into the nitty gritty of the JavaScript language, so I am writing this as a cry for help, PLEASE! help me become a better JavaScript developer.
 
-<div class="alert warning"><i style="display:inline-block" class="icon-star"> </i><span style="display:inline-block">PLEASE READ</span> <i style="display:inline-block" class="icon-star"> </i> <br /> I am no JavaScript expert, nor do I claim to be one.  I simply was tasked with writing some JavaScript at work, and I would like to be critiqued on my work.  Any / ALL comments, concerns, and pointers are welcome.  I hope the community can help me work out the kinks in my first days with Javascript</div>
+<div class="alert alert-warning"><i style="display:inline-block" class="icon-star"> </i><span style="display:inline-block">PLEASE READ</span> <i style="display:inline-block" class="icon-star"> </i> <br /> I am no JavaScript expert, nor do I claim to be one.  I simply was tasked with writing some JavaScript at work, and I would like to be critiqued on my work.  Any / ALL comments, concerns, and pointers are welcome.  I hope the community can help me work out the kinks in my first days with Javascript</div>
 
 # Javascript Objects
 

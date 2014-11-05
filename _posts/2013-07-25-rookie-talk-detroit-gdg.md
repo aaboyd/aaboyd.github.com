@@ -36,6 +36,6 @@ The one thing I think that this has really shown me is that I need to get involv
 
 If nerves are what is stopping you from speaking publicly, remember
 
-> You Miss 100% of the Shots You Don't Take <cite>Wayne Gretzky</cite>
+<blockquote><p>You Miss 100% of the Shots You Don't Take</p><footer><cite>Wayne Gretzky</cite></footer></blockquote>
 
 ####[Slides](https://speakerdeck.com/aaboyd/google-web-toolkit-in-practice)

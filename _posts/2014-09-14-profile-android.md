@@ -9,7 +9,7 @@ description : Learn the android tools and use them before you need to.
 
 The android sdk comes with a few tools that aren't used as often as the main IDE [Android Studio](http://developer.android.com/sdk/installing/studio.html) or [Eclipse ADT](http://developer.android.com/tools/sdk/eclipse-adt.html).  Some of these tools are not included with Android Studio and must be run individually.
 
-<div class="alert success">The rest of this post will assume users are using Android Studio.  The methodology / workflow is a bit different using Eclipse ADT</div>
+<div class="alert alert-success">The rest of this post will assume users are using Android Studio.  The methodology / workflow is a bit different using Eclipse ADT</div>
 
 It's important to learn and use these tools before you **_NEED_** them.
 
@@ -46,9 +46,7 @@ The hprof file you saved needs to be converted using the [Android Hprof Converte
 
 The tool simply converts the hprof to be imported to other tools.  In my case I used [MAT](http://www.eclipse.org/mat/).
 
-``` shell
-hprof-conv input.hprof output.hprof
-```
+{% highlight bash %}hprof-conv input.hprof output.hprof{% endhighlight %}
 
 #### View Results in MAT
 
@@ -92,6 +90,3 @@ Immediately following the use of the app.  Go ahead and hit the "stop method pro
 The results should automatically be showed inside device monitor.  The main view shows which methods are running the longest and a graph at the top showing what threads are used and what methods are run on each thread.
 
 For more info on how to analyze the results and different things to look for.  Check out the [Android Profiling Documentation](http://developer.android.com/tools/debugging/debugging-tracing.html).
-
-
-<div class="alert secondary">Expect a follow up with details from an improvement I made in less than 20 minutes becuase of these tools</div>

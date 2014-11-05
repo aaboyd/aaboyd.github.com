@@ -2,8 +2,9 @@ permalink: /:year/:month/:title
 
 timezone: America/New_York
 lsi: false
-exclude: ["README.md"]
+exclude: ["README.md", "Blog.sublime-project", "run.sh", "CNAME"]
 encoding: utf-8
+pygments: false
 
 url : http://alexboyd.me
 title : Alex Boyd

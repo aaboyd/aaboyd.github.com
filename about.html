@@ -1,0 +1,66 @@
+---
+layout: default
+title : About
+group: navigation
+---
+<style>
+@media print
+{
+    #resume-header
+    {
+        display: none;
+    }
+
+    #resume
+    {
+        font-size: 0.5em;
+    }
+}
+
+#resume h4
+{
+    margin: 0;
+}
+
+#resume h4 i
+{
+    font-size: 0.75em;
+}
+</style>
+
+<span id="resume">
+    <div class="row" id="resume-header">
+        {% if page.title %}<h1 class="col-xs-12 text-center">{{ page.title }}</h1>{% endif %}
+        <h2 class="col-xs-12">Work Experience</h2>
+    </div>
+
+    {% for job in site.data.resume.work %}
+    <div class="row">
+        <div class="col-xs-6">
+            <h4 class="text-primary">
+            {{ job.company }}
+            {% if job.website != "" %}
+                <a href="{{ job.website }}"><i class="fa fa-external-link"></i></a>
+            {% endif %}
+            </h4>
+        </div>
+        <div class="col-xs-6 text-right">{{ job.startDate | date: "%B %Y" }} - {{ job.endDate | date: "%B %Y" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h5>{{ job.position }}</h5>
+            <ul>
+            {% for highlight in job.highlights %}
+                <li>{{ highlight }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+
+    <h3>Education</h3>
+    {% for school in site.data.resume.education %}
+        <h4 class="text-primary">{{ school.institution }}</h4>
+        <h5>{{ school.studyType }} {{ school.area }}</h5>
+    {% endfor %}
+</span>

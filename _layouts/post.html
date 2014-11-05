@@ -2,56 +2,71 @@
 layout: default
 ---
 
-<div>
-	<div class="row post_header">
-   		{% if page.title %}<h1 class="title">{{ page.title }}</h1>{% endif %}
-   		{% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
-   		<h4 class="date">{{ page.date | date: "%B %e, %Y" }}</h4>
-   </div>
-</div>
+<span style="text-align:center">
+	{% if page.title %}<h1 class="title">{{ page.title }}</h1>{% endif %}
+	{% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
+	<h4 class="date">{{ page.date | date: "%B %e, %Y" }}</h4>
+</span>
+
 <div style="text-align:center">
-	<div class="row">
-		<div class="six columns share">
-			<h5>Share
-				<a href="http://www.facebook.com/share.php?u={{ site.url }}{{ page.url }}&title={{ page.title }} - Alex Boyd#"><i class="icon-facebook"></i></a>
-				<a href="http://twitter.com/home?status={{ page.title }} - Alex Boyd%0A{{ site.url }}{{ page.url }}"><i class="icon-twitter"></i></a>
-				<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"><i class="icon-gplus"></i></a>
-				<!--
-				<a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }} - Alex Boyd"><i class="icon-stumbleupon"></i></a>
-        -->
-				<a href="mailto:?subject=Check this out!&body={{ page.title }} ({{ site.url }}{{ page.url }}) - Alex Boyd%0D%0A%0D%0A%0D%0A{{ page.description }}"><i class="icon-mail"></i></a>
-			</h5>
-		</div>
-		{% unless page.tags == empty %}
-		<div class="six columns tags">
-		   	<h5>Tags
-				{% for tag in page.tags %}
-					<a class="primary badge" href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
-				{% endfor %}
-			</h5>
-		</div>
-		{% endunless %}
-   </div>
+	<div class="col-md-2">
+		<h4>Share</h4>
+	</div>
+	<div class="col-md-4" style="text-align:center">
+		<h4 class="row">
+			<div class="col-xs-2 col-xs-offset-2 col-md-2 col-md-offset-0">
+				<a href="http://www.facebook.com/share.php?u={{ site.url }}{{ page.url }}&title={{ page.title }} - Alex Boyd#"><i class="fa fa-facebook"></i></a>
+			</div>
+			<div class="col-xs-2 col-md-2 col-md-offset-0">
+				<a href="http://twitter.com/home?status={{ page.title }} - Alex Boyd%0A{{ site.url }}{{ page.url }}"><i class="fa fa-twitter"></i></a>
+			</div>
+			<div class="col-xs-2 col-md-2 col-md-offset-0">
+				<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"><i class="fa fa-google-plus"></i></a>
+			</div>
+			<div class="col-xs-2 col-md-2 col-md-offset-0">
+				<a href="mailto:?subject=Check this out!&body={{ page.title }} ({{ site.url }}{{ page.url }}) - Alex Boyd%0D%0A%0D%0A%0D%0A{{ page.description }}"><i class="fa fa-envelope"></i></a>
+			</div>
+		</h4>
+	</div>
+	{% unless page.tags == empty %}
+	<h4 class="col-md-2">Tags</h4>
+	<h4 class="col-md-4">
+	{% for tag in page.tags %}
+		<a class="label label-default" href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
+	{% endfor %}
+	</h4>
+	{% endunless %}
 </div>
 
-<div class="row" style="margin-top:10px">
-	{{ content }}
+<div class="row">
+	<div class="col-md-12">
+		{{ content }}
+	</div>
+</div>
 
-	<div class="pagination" style="margin-top:10px;text-align: center">
-		{% if page.previous %}
-		<div class="large secondary btn icon-left entypo icon-left-open">
-			<a href="{{ BASE_PATH }}{{ page.previous.url }}"
-				title="{{ page.previous.title }}">Previous</a>
+<div class="row">
+	<div class="col-md-12" style="margin-top:1em">
+		<div class="btn-group btn-group-justified">
+			{% if page.previous %}
+				<a class="btn btn-primary" href="{{ BASE_PATH }}{{ page.previous.url }}"
+					title="{{ page.previous.title }}">
+					<span class="pull-left">Previous</span>
+				</a>
+			{% else %}
+				<a disabled class="btn btn-primary">
+					<span class="pull-left">Previous</span>
+				</a>
+			{% endif %}
+			<a class="btn btn-primary" href="{{ BASE_PATH }}/archive.html">Archive</a>
+			{% if page.next %}
+				<a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}" class="btn btn-primary">
+					<span class="pull-right">Next</span>
+				</a>
+			{% else %}
+				<a disabled class="btn btn-primary">
+					<span class="pull-right">Next</span>
+				</a>
+			{% endif %}
 		</div>
-		{% endif %}
-		<div class="large secondary btn">
-			<a href="{{ BASE_PATH }}/archive.html">Archive</a>
-		</div>
-		{% if page.next %}
-		<div class="large secondary btn icon-right entypo icon-right-open">
-			<a href="{{ BASE_PATH }}{{ page.next.url }}"
-				title="{{ page.next.title }}">Next</a>
-		</div>
-		{% endif %}
 	</div>
 </div>

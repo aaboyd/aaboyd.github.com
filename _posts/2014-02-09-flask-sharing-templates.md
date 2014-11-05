@@ -5,7 +5,7 @@ tags: [python,flask,javascript,nunjucks,jinja2]
 description: Sharing templates on the backend with jinja2 and on the client side with nunjucks, all inside flask
 ---
 
-<div class="alert success">Example Project on <a href="http://github.com/aaboyd/flask-shared-templates">Github</a></div>
+<div class="alert alert-success">Example Project on <a href="http://github.com/aaboyd/flask-shared-templates">Github</a></div>
 ## Introduction
 After writing a small little web application with [python](http://www.python.org/) and [flask](http://flask.pocoo.org/), I realized I needed templates.  Flask comes with jinja2 support built-in so I opted to take that route and started adding simple templates.  It wasn't long that I realized that in any AJAX heavy application I would need to use the templates both on the front-end (client-side) as well as the back-end (server-side).  After some research I found a great library called [nunjucks](http://jlongster.github.io/nunjucks/).  It's a port of jinja2 to javascript that can be used in the browser and in node.js,
 

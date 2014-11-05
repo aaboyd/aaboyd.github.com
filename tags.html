@@ -5,9 +5,9 @@ header: Posts By Tag
 group: navigation
 ---
 
-<div style="padding-top:10px">
+<div>
   {% for tag in site.tags %}
-    <div style="margin:3px" class="large secondary btn"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></div>
+    <a class="btn btn-primary" style="margin:0.25em" href="#{{ tag[0] }}">{{ tag[0] }}</a>
   {% endfor %}
 </div>
 

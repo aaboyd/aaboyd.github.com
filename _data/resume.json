@@ -1,0 +1,257 @@
+{
+  "basics": {
+    "name": "Alex Boyd",
+    "label": "Senior Software Engineer",
+    "picture": "http://aaboyd.github.io/assets/img/me.png",
+    "email": "alex.boyd@outlook.com",
+    "phone": "(586) 980 9876",
+    "website": "http://alexboyd.me",
+    "summary": "TODO",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Macomb",
+      "countryCode": "US",
+      "region": "MI"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "boydale1",
+        "url": "https://twitter.com/boydale1"
+      },
+      {
+        "network": "Github",
+        "username": "aaboyd",
+        "url": "https://github.com/aaboyd"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "iRule",
+      "position": "Senior Software Engineer",
+      "website": "http://iruleathome.com",
+      "startDate": "2014-03-01",
+      "endDate": "2014-11-01",
+      "summary": "TODO",
+      "highlights": [
+        "Developed and executed code review policies for 5+ developers",
+        "Implemented features from conception, development, testing, and release",
+        "Streamlined mobile application release and beta testing with git and Jenkins",
+        "Managed client expectations while delivering high quality software"
+      ]
+    },
+    {
+      "company": "Tiller",
+      "position": "Software Engineer",
+      "website": "",
+      "startDate": "2014-11-01",
+      "endDate": "2014-03-01",
+      "summary": "TODO",
+      "highlights": [
+        "Advanced frontend work with SASS, HTML, JS",
+        "Involved in all processes of application from user experience to implementation",
+        "Developed scalable web application to facilitate field workforce management",
+        "Mobile web application with iOS and Android wrappers",
+        "Python, JS/HTML/CSS, jQuery, Backbone.js, MongoDB, Cordova (Phonegap), heroku"
+      ]
+    },
+    {
+      "company": "iRule",
+      "position": "Software Engineer",
+      "website": "http://iruleathome.com",
+      "startDate": "2011-12-01",
+      "endDate": "2013-11-01",
+      "summary": "TODO",
+      "highlights": [
+        "Python, Java, Android, Objective-C, iOS, Google Web Toolkit Development",
+        "Worked in a team to maintain two mobile applications",
+        "Architected multiple software components across multiple platforms",
+        "Reviewed and maintained multiple code bases",
+        "Experience with Eclipse, XCode, Google App Engine, NoSQL datastore"
+      ]
+    },
+    {
+      "company": "New World Systems",
+      "position": "Jr. Solution Consultant",
+      "website": "http://www.newworldsystems.com/",
+      "startDate": "2011-05-01",
+      "endDate": "2011-11-01",
+      "summary": "TODO",
+      "highlights": [
+        "C#/.NET development with MS-SQL",
+        "Detailed work on Continuous Integration / Build management",
+        "Experience with Agile Development and Test Driven Development",
+        "Experience with Visual Studio (2003,2005,2008,2010) and TFS",
+        "Worked on Windows Installer to streamline installation process ( Windows Installer / Wix )"
+      ]
+    },
+    {
+      "company": "Motorola Mobility",
+      "position": "Student Software Engineer",
+      "website": "http://www.motorola.com",
+      "startDate": "2011-01-01",
+      "endDate": "2011-05-01",
+      "summary": "TODO",
+      "highlights": [
+        " Senior Capstone Project partnered with Motorola Mobility",
+        "Java, REST, restlet, jQuery Mobile, iOS, Android, Eclipse, XCode, Vaadin",
+        "Implemented Solution for content providers to deliver second-screen content to TV users",
+        "Involved in developing back-end services, front end web apps, mobile web apps, database management"
+      ]
+    },
+    {
+      "company": "EKK Inc",
+      "position": "Software Engineer Intern",
+      "website": "http://ekkinc.com/",
+      "startDate": "2010-05-01",
+      "endDate": "2011-03-01",
+      "summary": "TODO",
+      "highlights": [
+        "Technologies: Fortran, C/C++, GTK+, wxWidgets, Tcl/Tk and CVS",
+        "Helped develop windows and linux compatible software",
+        "Developed windows installer for easy distribution",
+        "Developed multiple front-ends for existing fortran applications"
+      ]
+    },
+    {
+      "company": "NSCL",
+      "position": "Computer Assistant",
+      "website": "http://www.nscl.msu.edu/",
+      "startDate": "2010-11-01",
+      "endDate": "2011-05-01",
+      "summary": "TODO",
+      "highlights": [
+        "Serviced 400+ computers and printers",
+        "Regularly performed software and hardware maintenance",
+        "Imaged and installed new computers",
+        "Provided customer service in a clear and professional manner"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Florence's Friends ( American Cancer Society )",
+      "position": "Member",
+      "website": "",
+      "startDate": "2002-01-01",
+      "endDate": "2014-11-01",
+      "summary": "TODO",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Michigan (Dearborn)",
+      "area": "Software Engineering",
+      "studyType": "M.S.",
+      "startDate": "2011-05-01",
+      "endDate": "2013-04-01",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Michigan State University",
+      "area": "Computer Science",
+      "studyType": "B.S.",
+      "startDate": "2008-08-01",
+      "endDate": "2011-05-01",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming Languages / Markup",
+      "level": "",
+      "keywords": [
+        "Python",
+        "Java",
+        "Objective-C",
+        "C#",
+        "HTML",
+        "CSS",
+        "JS",
+        "SASS"
+      ]
+    },
+    {
+      "name": "Source Control",
+      "level": "",
+      "keywords": [
+        "git",
+        "hg"
+      ]
+    },
+    {
+      "name": "Integrated Development Environments",
+      "level": "",
+      "keywords": [
+        "Visual Studio",
+        "Eclipse",
+        "Android Studio",
+        "XCode",
+        "IntelliJ IDEA",
+        "PyCharm",
+        "Xamarin Studio"
+      ]
+    },
+    {
+      "name": "Frameworks / Libraries",
+      "level": "",
+      "keywords": [
+        "Google Web Toolkit",
+        "Android",
+        "iOS",
+        "Django",
+        "Flask",
+        "ASP.NET MVC"
+      ]
+    },
+    {
+      "name": "Databases / Datastores",
+      "level": "",
+      "keywords": [
+        "NoSQL",
+        "Google App Engine Datastore",
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Cloud Services",
+      "level": "",
+      "keywords": [
+        "Google App Engine",
+        "Amazon Web Services"
+      ]
+    },
+    {
+      "name": "Management / Practices",
+      "level": "",
+      "keywords": [
+        "Agile Project Management",
+        "Technical Leadership",
+        "Scrum",
+        "eXtreme Programming",
+        "TDD"
+      ]
+    }
+  ],
+  "languages": [],
+  "interests": [],
+  "references": [
+    {
+      "name": "Andrew Pirkola",
+      "reference": "During Alex's time at New World Systems he worked with a core team responsible for the build, deployment, code management, and other infrastructure necessary to facilitate software development. The team was largely self-driven and with such a large breadth of potential work it is easy for someone to become lost in the possibilities or spend too much time on activities that, although useful, do not provide as great of value.  Alex excelled at being able to identify a problem, work independently or with others explore then validate potential solutions, and constructively communicate to the group his findings - which were most often adopted.  This combination of assertiveness, sound judgment, team work, and good communication skills made him an invaluable contributor to not only his team but to the organization as a whole."
+    },
+    {
+      "name": "Alvin Chow",
+      "reference": "Alex was an invaluable full-stack software engineer at Tiller, and a key reason we were able to get our MVP out the door. His wide-ranging, \"generalist\" skill set was more than evident, as he capably worked on every component in the product (backend, frontend, and Android/iOS apps). In particular, Alex built out core parts of the frontend, including a number of custom UI's. He also took the initiative in making improvements to our infrastructure and processes, and was always more than willing to get involved in higher level product decisions.  Alex is very flexible and self-sufficient engineer, and very quick to pick up new things. In short, he can be counted on to get things done, and if he doesn't know how to do something he will figure it out or learn what he needs to - all while adhering to good development practices. For all his talents, Alex is very humble, and is an awesome guy to have on your team."
+    }
+  ]
+}
