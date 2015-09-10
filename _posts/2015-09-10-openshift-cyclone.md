@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Twisted Python / Cyclone, 'Hello, World!' application, on Openshift"
+title: "Python Twisted / Cyclone, 'Hello, World!' application, on Openshift"
 tags : [python, openshift]
 description : Running a simple http://cyclone.io application on (https://www.openshift.com/
 ---
@@ -135,6 +135,8 @@ if __name__ == "__main__":
     reactor.listenTCP(port, Application(), interface=host)
     reactor.run()
 {% endhighlight %}
+
+#### [Github Repo](https://github.com/aaboyd/openshift-cyclone)
 
 # Download .gitignore for python projects
 
