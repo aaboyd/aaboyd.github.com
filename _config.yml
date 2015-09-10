@@ -4,7 +4,7 @@ timezone: America/New_York
 lsi: false
 exclude: ["README.md", "Blog.sublime-project", "run.sh", "CNAME"]
 encoding: utf-8
-pygments: false
+highlighter: pygments
 
 url : http://alexboyd.me
 title : Alex Boyd
