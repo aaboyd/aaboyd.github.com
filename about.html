@@ -54,6 +54,7 @@ group: navigation
                 <li>{{ highlight }}</li>
             {% endfor %}
             </ul>
+            <br>
         </div>
     </div>
     {% endfor %}
@@ -62,5 +63,6 @@ group: navigation
     {% for school in site.data.resume.education %}
         <h4 class="text-primary">{{ school.institution }}</h4>
         <h5>{{ school.studyType }} {{ school.area }}</h5>
+        <br>
     {% endfor %}
 </span>

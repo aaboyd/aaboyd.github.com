@@ -29,11 +29,19 @@
   },
   "work": [
     {
+      "company": "Lunar Labs",
+      "position": "Software Craftsman",
+      "website": "https://joinlunar.com",
+      "startDate": "2015-12-01",
+      "endDate": "current",
+      "summary": "TODO"  
+    },
+    {
       "company": "iRule",
       "position": "Senior Software Engineer",
       "website": "http://iruleathome.com",
       "startDate": "2014-03-01",
-      "endDate": "2014-11-01",
+      "endDate": "2015-11-01",
       "summary": "TODO",
       "highlights": [
         "Developed and executed code review policies for 5+ developers",
@@ -46,7 +54,7 @@
       "company": "Tiller",
       "position": "Software Engineer",
       "website": "",
-      "startDate": "2014-11-01",
+      "startDate": "2013-11-01",
       "endDate": "2014-03-01",
       "summary": "TODO",
       "highlights": [
@@ -113,20 +121,6 @@
         "Helped develop windows and linux compatible software",
         "Developed windows installer for easy distribution",
         "Developed multiple front-ends for existing fortran applications"
-      ]
-    },
-    {
-      "company": "NSCL",
-      "position": "Computer Assistant",
-      "website": "http://www.nscl.msu.edu/",
-      "startDate": "2010-11-01",
-      "endDate": "2011-05-01",
-      "summary": "TODO",
-      "highlights": [
-        "Serviced 400+ computers and printers",
-        "Regularly performed software and hardware maintenance",
-        "Imaged and installed new computers",
-        "Provided customer service in a clear and professional manner"
       ]
     }
   ],
